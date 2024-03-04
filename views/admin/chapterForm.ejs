@@ -1,0 +1,48 @@
+<% layout('/layouts/adminBoilerplate.ejs') %>
+
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <br><br>
+        <h3>Add a Chapter</h3>
+        <br>
+        <form action="/Gamedify/admin/<%=id%>/chapter" method="post" novalidate class="needs-validation" >
+        
+            <div class="mb-3">
+                <label for="title" class="form-label">Chapter Name</label>
+                <input type="text" id="title" name="chapterName" placeholder="" class="form-control" required>
+                <!-- <div class="valid-feedback">Title looks good!</div> -->
+                <div class="invalid-feedback">Enter </div>
+            </div>
+            
+            <!-- <div class="mb-3">
+                <label for="description" class="form-label">About Course</label>
+                <textarea name="aboutCourse" id="description" cols="30" rows="2" placeholder="" class="form-control" required></textarea>
+                <div class="invalid-feedback">Enter</div>
+            </div> -->
+            
+            <!-- <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input  name="listing[price]" placeholder="1000" class="form-control" required>
+                <div class="invalid-feedback">Enter valid price</div>
+            </div> -->
+
+            <!-- <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="listing[location]" placeholder="Jodhpur,Rajasthan" class="form-control" required>
+                    <div class="invalid-feedback">Enter valid location</div>
+                </div>
+                    
+                <div class="mb-3 col-md-6">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" name="listing[country]" placeholder="India" class="form-control" required>
+                    <div class="invalid-feedback">Enter Country</div>
+                </div>
+            </div> -->
+            <br>
+            <button class="btn btn-dark add-btn">Add</button>
+            <br><br>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,239 @@
+body {
+    height: 100vh;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;     
+}
+
+
+/* navbar.ejs */
+.navbar-self {
+   height: 100px;
+   /* top: 40px; */ 
+}
+
+.navbar-user {
+    background-color: aliceblue;
+}
+
+.navbar-sticky {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+.navbarNav-self {
+    justify-content: center;
+}
+
+.color-self {
+    background-color: #00008B;
+}
+
+/* footer.ejs */
+.footer {
+    background-color: #00008B ;
+    height: 260px;
+    /* width: 100%; */
+    position: relative;
+    top: 40px;
+    /* bottom: 10px; */
+    /* z-index: 44; */
+}
+
+/* home.ejs */
+.gif {
+    background-color: antiquewhite;
+    /* width: 100vh; */
+    height: 500px;
+    width: 70%;
+    position: relative;
+    left: 200px;
+    margin: 1rem;
+}
+
+.home-content img {
+    width: 100%;
+    height: 600px;
+    opacity: 20%;
+    margin-bottom: 0.5rem;
+}
+
+.blocks {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 90%;
+    position: absolute;
+    top: 700px;
+    left: 60px;
+    background: transparent;
+}
+
+.block {
+    background-color: white;
+    width: 80%;
+    height: 60%;
+    margin-bottom: 0.5rem;
+    /* justify-content: center; */
+    align-self: center;
+}
+
+.get-start {
+    border: 4px solid black;
+    height: 100px;
+    width: 200px;
+    position: relative;
+    top: 20px;
+    left: 600px;
+    border-radius: 40px;
+}
+
+.get-start h1 {
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+.get-start:hover {
+    background-color: #00008B;
+    color: white;
+}
+
+/* signup.ejs */
+.sign {
+    background-color: #00008B;
+    height: 360px;
+    position: relative;
+    top: 20px;
+    width: 60%;
+    left: 190px;
+    border-radius: 20px;
+    background-image: url("https://s3-alpha-sig.figma.com/img/95c9/4dd2/8d5fc00d8442222571b2b7f0a27c2c3a?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W2aFNeEVGevaJbuc5d6gsOiaZKyQ9FNudHXQAOPTEpUHKlxvSScw7FKgsxg-r4iXKuj00xsaPaDjT9jAiyyVrXjirwviPXUxm7YIa22Uc2eATrataTouHlYdnoID-z8~wKmu1MN4VkdvXcTCDfx-CtoFiGZXTeJWgXoINdK6vnaxMZ4TuSz0Gt2rgZFeb5gB1VN2uxzX22XiexbXGB72NhgExYgbfA7JeIxaS-jCh68JpCN3cIP25LvPG1qBD7AR5ncIgF9nn~SSO43NXOohi~i9ona9A~eESVBMjYz-d6WGKA1-cxYs3UbFy-4dmQLe52vXwmkdFdij6-QBUdPEJA__");
+    background-size: cover;
+    opacity: 70%;
+}
+
+.sign-content {
+    position: absolute;
+    top: 180px;
+    left: 380px;
+}
+
+.sign-content label {
+    font-weight: bolder;
+}
+
+.sign-icon i {
+    font-size: 200px;
+    position: absolute;
+    top: 240px;
+    left: 800px;
+}
+
+/* userInfo.ejs */
+.wrapper {
+    margin-top: 0.6rem;
+    grid-gap:6px;
+    display: grid;
+    /* background-color: aquamarine; */
+    /* grid-template-columns: 300px 300px 500px; */
+    grid-template-columns:  3fr 2fr 2fr;
+    grid-auto-rows: 200px;
+    height: 460px;
+    width: 90%;
+    position: relative;
+    left: 50px;
+    margin-bottom: 8rem;
+}
+
+.box {
+    border-radius: 20px;
+    margin-right: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.a {
+    background-color: #D3D3D3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    /* display: flex; 
+    flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.user-info {
+    height: 300px;
+    width: 90%;
+    position: relative;
+    top: 30px;
+    left: 30px;
+    /* background-color: slategrey; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem; */
+}
+
+.user-img {
+    position: relative;
+    height: 260px;
+    width: 40%;
+    background-color: white;
+    border-radius: 20px;
+    border: 4px solid black;
+    margin-right: 0.5rem;
+}
+
+.user-detail {
+    position: relative;
+    height: 260px;
+    width: 60%;
+    /* background-color: #00008B; */
+    display: flex;
+    flex-direction: column;
+    padding: 0.4rem;
+}
+
+.user-box {
+    background-color: white;
+    height: 80px;
+    width: 80%;
+    position: relative;
+    top: 40px;
+    left: 50px;    
+}
+
+.t {
+    background-color: aliceblue;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+
+.b {
+    background-color: blueviolet;
+}
+
+.c {
+    background-color: burlywood;
+}
+
+.d {
+    background-color: yellow;
+}
+
+.e {
+    background-color: violet;
+}
+
+.f {
+    background-color: tomato;
+}
+
+.g {
+    background-color: teal;
+}

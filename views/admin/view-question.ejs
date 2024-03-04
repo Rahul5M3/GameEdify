@@ -1,0 +1,46 @@
+<% layout('/layouts/adminBoilerplate.ejs') %>
+
+
+<div class="col-8 view-chapter-course">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Question</th>
+         <th scope="col">chapter</th>
+        <!-- <th scope="col">Questions</th>  -->
+        <th>All given Options</th>
+        <th>Correct Ans</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% for(let ques of questions) { %>
+      <tr>
+        <th scope="row"><%=ques.question%></th>
+        <td><%=ques.chapter.chapterName%></td>
+        <td>
+            <ol>
+            <% for(let opt of ques.options){ %>
+              <% if(opt!==""){ %>
+                <li> &nbsp; <%=opt%></li>
+              <% } %>
+            <% } %>
+        </ol>
+        </td>
+        <td><%=ques.answer%></td>
+        <td>
+          <form action="/Gamedify/admin/<%=ques._id%>/question?_method=delete" method="post">
+            <button>Delete </button>
+          </form>
+        </td>
+        <td>
+          <form action="/Gamedify/admin/<%=ques._id%>/question?_method=put">
+            <button>Edit </button>
+          </form>
+      </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>

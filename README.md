@@ -1,2 +1,1 @@
 # GameEdify
-Education Games

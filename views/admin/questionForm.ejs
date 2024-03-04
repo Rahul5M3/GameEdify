@@ -1,0 +1,63 @@
+<% layout('/layouts/adminBoilerplate.ejs') %>
+    
+
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <br><br>
+        <h3>Create a New Question <%chapterId%></h3>
+        <br>
+        <form action="/Gamedify/admin/<%=chapterId%>/question/new" method="POST" novalidate class="needs-validation" >
+        
+            <div class="mb-3">
+                <label for="title" class="form-label">Question</label>
+                <textarea type="text" id="title" name="Ques[question]" placeholder="" class="form-control" required></textarea>
+                <!-- <div class="valid-feedback">Title looks good!</div> -->
+                <div class="invalid-feedback">Enter Question</div>
+            </div>
+
+            <div class="mb-3 col-6">
+                <label for="opt" class="form-label">Options</label>
+                <input type="text" class="form-control mb-2" name="option[]" id="opt" required>
+                <input type="text" class="form-control mb-2" name="option[]" id="opt" required>
+                <input type="text" class="form-control mb-2" name="option[]" id="opt">
+                <input type="text" class="form-control mb-2" name="option[]" id="opt">
+                <div class="invalid-feedback">Give atleast 2 options</div>
+            </div>
+
+            <div class="mb-3 col-6">
+                <label for="ans" class="form-label">Correct Answer</label>
+                <input type="text" class="form-control" name="Ques[answer]" id="ans" required>
+            </div>
+            
+            <!-- <div class="mb-3">
+                <label for="description" class="form-label">About Course</label>
+                <textarea name="aboutCourse" id="description" cols="30" rows="2" placeholder="" class="form-control" required></textarea>
+                <div class="invalid-feedback">Enter</div>
+            </div> -->
+            
+            <!-- <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input  name="listing[price]" placeholder="1000" class="form-control" required>
+                <div class="invalid-feedback">Enter valid price</div>
+            </div> -->
+
+            <!-- <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="listing[location]" placeholder="Jodhpur,Rajasthan" class="form-control" required>
+                    <div class="invalid-feedback">Enter valid location</div>
+                </div>
+                    
+                <div class="mb-3 col-md-6">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" name="listing[country]" placeholder="India" class="form-control" required>
+                    <div class="invalid-feedback">Enter Country</div>
+                </div>
+            </div> -->
+            <br>
+            <button class="btn btn-dark add-btn">Add</button>
+            <br><br>
+        </form>
+    </div>
+</div>

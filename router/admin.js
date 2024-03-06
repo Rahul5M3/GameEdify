@@ -5,8 +5,11 @@ const Course=require('../models/course.js');
 const Question=require('../models/question.js');
 const Chapter=require('../models/chapter.js');
 
-router.get("/",(req,res)=>{
-    res.render("admin/admin-page.ejs");
+router.get("/",async (req,res)=>{
+    let totalCourse=await Course.countDocuments({});
+    let totalChapter=await Chapter.countDocuments({});
+    let totalQuestion=await Question.countDocuments({});
+    res.render("admin/admin-page.ejs",{totalCourse,totalChapter,totalQuestion});
 })
 
 router.get('/course/new',(req,res)=>{
@@ -52,8 +55,13 @@ router.get('/:id/chapter/new',(req,res)=>{
     res.render("admin/chapterForm.ejs",{id});
 })
 
-router.get("/view/chapter", async (req,res)=>{
+router.get("/view/chapter",async(req,res)=>{
     let chapters=await Chapter.find({}).populate('course');
+    res.render("admin/view-chapter.ejs",{chapters});
+})
+
+router.get("/:id/view/chapter", async (req,res)=>{
+    let chapters=await Chapter.find({course:req.params.id}).populate('course');
     res.render("admin/view-chapter.ejs",{chapters});
 })
 
@@ -77,14 +85,19 @@ router.post('/:chapterId/question/new', async (req,res)=>{
     let result=await newQues.save();
 
     let chapter=await Chapter.findById(chapterId);
-    chapter.question=result;
+    chapter.question.push(result);
     await chapter.save();
 
     let course=await Course.findById(chapter.course);
     course.questions.push(result);
     await course.save();
 
-    res.redirect('/Gamedify/admin/view/chapter');
+    res.redirect(`/Gamedify/admin/${chapterId}/view/chapter`);
+})
+
+router.get("/:id/view/question", async(req,res)=>{
+    let questions=await Question.find({chapter:req.params.id}).populate("chapter");
+    res.render('admin/view-question.ejs',{questions});
 })
 
 router.get("/view/question", async(req,res)=>{
@@ -105,6 +118,26 @@ router.delete("/:QuesId/question", async (req,res)=>{
 
     await Question.findByIdAndDelete(QuesId);
 
+})
+
+router.delete('/:chapterId/chapter', async (req,res)=>{
+    let {chapterId}=req.params;
+    console.log(chapterId);
+
+    let chapter=await Chapter.findByIdAndDelete(chapterId);
+
+    let course=await Course.findById(chapter.course);
+
+    await Course.findByIdAndUpdate(course._id,{$pull:{chapters:chapterId}});
+
+    let ques=await Question.find({chapter:chapterId});
+
+    for(let que of ques){
+        await Question.updateOne({_id:que._id},{$unset:{chapter:""}});
+    }
+    // await Question.updateOne({_id:ques._id})
+
+    res.redirect("/Gamedify/admin/view/chapter");
 })
 
 module.exports=router;

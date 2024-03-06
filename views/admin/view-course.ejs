@@ -1,36 +1,42 @@
 <% layout('/layouts/adminBoilerplate.ejs') %>
 
-<div class="col-8 view-chapter-course">
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Course</th>
-        <!-- <th scope="col">Chapters</th>
-        <th scope="col">Questions</th> -->
-        <th scope="col">Add</th>
-        <th scope="col">Delete</th>
-        <th scope="col">Edit</th>
-      </tr>
-    </thead>
-    <tbody>
+<div class="add-new"><a href="/Gamedify/admin/course/new">New Course</a></div>
+
+<div class="course-page">
+  
+  <div class="table-heading">
+    <table class="table t-head">
+      <thead>
+        <tr>
+          <th scope="col"><b>Courses</b></th>
+        </tr>
+      </thead>
+    </table>  
+  </div>
+
+  <div class="table-content">
+    <table class="table">
+      <thead>
+      </thead>
+      <tbody>
         <% for(let course of courses) { %>
-      <tr>
-        <th scope="row"><%=course.courseName%></th>
-        <!-- <td><%=course.chapters%></td>
-        <td><%=course.questions%></td> -->
-        <td>
-            <a href="/Gamedify/admin/<%=course._id%>/chapter/new"><button>Add New Chapter</button></a>
-            
+        <tr>
+          <th scope="row"><%=course.courseName%></th>
+          <td><a href="/Gamedify/admin/<%=course._id%>/chapter/new"><button class="all-button">New Chapter</button></a></td>
+          <td><a href="/Gamedify/admin/<%=course._id%>/view/chapter"><button class="all-button">View chapter </button></a> </td>
+          <td>
+            <form action="/Gamedify/admin/<%=course._id%>/course?_method=put" method="post">
+              <button class="all-button">Edit</button>
+            </form>
+          </td>
+          <td>
+            <form action="/Gamedify/admin/<%=course._id%>/course?_method=delete" method="post">
+              <button class="all-button">Delete</button>
+            </form>
         </td>
-        <td>
-            <a href="/Gamedify/admin/<%=course._id%>/course?_method=delete"><button>Delete</button></a>
-        </td>
-        <td>
-          <a href="/Gamedify/admin/<%=course._id%>/course?_method=put"><button>Edit</button></a>
-      </td>
-      <td><a href="/Gamedify/admin/view/chapter"><button>View chapter </button></a></td>
-      </tr>
-      <% } %>
-    </tbody>
-  </table>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
 </div>

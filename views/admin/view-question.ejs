@@ -1,46 +1,61 @@
 <% layout('/layouts/adminBoilerplate.ejs') %>
 
 
-<div class="col-8 view-chapter-course">
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Question</th>
-         <th scope="col">chapter</th>
-        <!-- <th scope="col">Questions</th>  -->
-        <th>All given Options</th>
-        <th>Correct Ans</th>
-        <th scope="col">Delete</th>
-        <th scope="col">Edit</th>
-      </tr>
-    </thead>
-    <tbody>
-        <% for(let ques of questions) { %>
-      <tr>
-        <th scope="row"><%=ques.question%></th>
-        <td><%=ques.chapter.chapterName%></td>
-        <td>
-            <ol>
-            <% for(let opt of ques.options){ %>
-              <% if(opt!==""){ %>
-                <li> &nbsp; <%=opt%></li>
+<div class="course-page">
+  
+  <div class="table-heading">
+    <table class="table t-head">
+      <thead>
+        <tr>
+          <th scope="col"><b>Questions</b></th>
+        </tr>
+      </thead>
+    </table>  
+  </div>
+
+  <div class="table-content">
+    <table class="table">
+      <thead>
+        <th>Question</th>
+        <th>Chapter</th>
+        <th>Option</th>
+        <th>Answer</th>
+        <th></th>
+        <th></th>
+      </thead>
+      <tbody>
+          <% for(let ques of questions) { %>
+        <tr>
+          <th scope="row"><%=ques.question%></th>
+          <% if(ques.chapter){ %>
+          <td><%=ques.chapter.chapterName%></td>
+          <% }else { %>
+            <td style="color: red;">Chapter Already Deleted</td>
+          <% } %>  
+          <td>
+              <ol>
+              <% for(let opt of ques.options){ %>
+                <% if(opt!==""){ %>
+                  <li> &nbsp; <%=opt%></li>
+                <% } %>
               <% } %>
-            <% } %>
-        </ol>
+          </ol>
+          </td>
+          <td><%=ques.answer%></td>
+          <td>
+            <form action="/Gamedify/admin/<%=ques._id%>/question?_method=delete" method="post">
+              <button class="all-button">Delete </button>
+            </form>
+          </td>
+          <td>
+            <form action="/Gamedify/admin/<%=ques._id%>/question?_method=put">
+              <button class="all-button">Edit </button>
+            </form>
         </td>
-        <td><%=ques.answer%></td>
-        <td>
-          <form action="/Gamedify/admin/<%=ques._id%>/question?_method=delete" method="post">
-            <button>Delete </button>
-          </form>
-        </td>
-        <td>
-          <form action="/Gamedify/admin/<%=ques._id%>/question?_method=put">
-            <button>Edit </button>
-          </form>
-      </td>
-      </tr>
-      <% } %>
-    </tbody>
-  </table>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    
+  </div>
 </div>

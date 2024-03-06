@@ -1,7 +1,36 @@
 <% layout('/layouts/adminBoilerplate.ejs') %>
 
-<a href="/Gamedify/admin/course/new"><button>Add New Course</button></a>
+<!-- <a href="/Gamedify/admin/course/new"><button>Add New Course</button></a>
 <a href="/Gamedify/admin/view/course"><button>View Course</button></a>
 <a href="/Gamedify/admin/view/chapter"><button>View chapter </button></a>
-<a href="/Gamedify/admin/view/question"><button>View Question </button></a>
+<a href="/Gamedify/admin/view/question"><button>View Question </button></a> -->
+
+<div class="admin-first-page">
+        <div class="boxes-info">
+            <div class="info-box">
+                <div class="inside-info-box">
+                    <div id="inside">Courses</div>
+                    <div id="inside2"><h4><%=totalCourse%></h4></div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="inside-info-box">
+                    <div id="inside">Chapters</div>
+                    <div id="inside2"><h4><%=totalChapter%></h4></div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="inside-info-box">
+                    <div id="inside">Questions</div>
+                    <div id="inside2"><h4><%=totalQuestion%></h4></div>
+                </div>
+            </div>
+            <div class="info-box">
+                <div class="inside-info-box">
+                    <div id="inside">Users</div>
+                    <div id="inside2"></div>
+                </div>
+            </div>
+        </div>
+</div>
    

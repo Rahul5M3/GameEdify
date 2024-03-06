@@ -1,33 +1,42 @@
 <% layout('/layouts/adminBoilerplate.ejs') %>
 
 
-<div class="col-8 view-chapter-course">
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Chapter</th>
-         <th scope="col">Course</th>
-         <th></th>
-        <!-- <th scope="col">Questions</th>  -->
-        <th scope="col">Delete</th>
-        <th scope="col">Edit</th>
-      </tr>
-    </thead>
-    <tbody>
+<div class="course-page">
+  
+  <div class="table-heading">
+    <table class="table t-head">
+      <thead>
+        <tr>
+          <th scope="col"><b>Chapters</b></th>
+        </tr>
+      </thead>
+    </table>  
+  </div>
+
+  <div class="table-content">
+    <table class="table">
+      <thead>
+      </thead>
+      <tbody>
         <% for(let chapter of chapters) { %>
-      <tr>
-        <th scope="row"><%=chapter.chapterName%></th>
-        <td><%=chapter.course.courseName%></td>
-        <td><a href="/Gamedify/admin/<%=chapter._id%>/question/new"><button>Add New Question</button></a></td>
-        <td>
-            <a href="/Gamedify/admin/<%=chapter._id%>/chapter/delete"><button>Delete </button></a>
+        <tr>
+          <th scope="row"><%=chapter.chapterName%></th>
+          <td><%=chapter.course.courseName%></td>
+          <td><a href="/Gamedify/admin/<%=chapter._id%>/question/new"><button class="all-button"> New Question</button></a></td>
+          <td><a href="/Gamedify/admin/<%=chapter._id%>/view/question"><button class="all-button">View Question </button></a>  </td>
+          <td>
+            <form action="/Gamedify/admin/<%=chapter._id%>/chapter?_method=put" method="post">
+              <button class="all-button">Edit</button>
+            </form>
+          </td>
+          <td>
+            <form action="/Gamedify/admin/<%=chapter._id%>/chapter?_method=delete" method="post">
+              <button class="all-button">Delete</button>
+            </form>
         </td>
-        <td>
-          <a href="/Gamedify/admin/<%=chapter._id%>/chapter/edit"><button>Delete </button></a>
-      </td>
-      <td><a href="/Gamedify/admin/view/question"><button>View Question </button></a></td>
-      </tr>
-      <% } %>
-    </tbody>
-  </table>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
 </div>

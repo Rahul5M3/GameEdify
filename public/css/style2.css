@@ -4,6 +4,7 @@ body {
     font-weight: 400;
     font-style: normal;    
     overflow: hidden; 
+    /* background-color: #E9EAEC; */
 }
 
 .start-navbar {
@@ -14,8 +15,181 @@ body {
     justify-content: center;
 }
 
-.course {
-    /* background-color: violet; */
+/* start-sidebar.ejs */
+.Sidebar {
+    background-color: rgb(218, 216, 216);
+    height: 100vh;
+    width: 18%;
+    position: relative;
+}
+
+#sidebarpart-1 {
+    /* background-color: white; */
+    color: white;
+    background-color: black;
+    height: 60px;
+    width: 90%;
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+#sidebarpart-1:hover {
+    color: black;
+    background-color: white;
+}
+
+#sidebarpart-1 a {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#sidebarpart-2 {
+    background-color: white;
+    height: 390px;
+    width: 90%;
+    position: absolute;
+    top: 110px;
+    left: 10px;
+    border-radius: 20px;
+}
+
+#sidebarpart-2 #a {
+    position: absolute;
+    height: 94%;
+    width: 80%;
+    /* background-color: black; */
+    top: 10px;
+    left: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+#a div {
+    /* background-color: blue; */
+    height: 40px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+#a a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+#a a:hover {
+    background-color: black;
+    color: white;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+
+#a a div {
+    padding-top: 0.5rem;
+}
+
+#sidebarpart-3 {
+    background-color: white;
+    height: 60px;
+    width: 90%;
+    position: absolute;
+    top: 520px;
+    left: 10px;
+    border-radius: 20px;
+}
+
+#sidebarpart-3 button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 14px;
+    left: 46px;
+    width: 60%;
+    font-size: larger;
+    font-weight: bold;
+}
+
+
+#sidebarpart-3 button:hover {
+    color: red;
+}
+
+/* explore.ejs */
+.explore-1{
+    /* background-color: black; */
+    height: 589px;
+    width: 82%;
+    position: absolute;
+    top: 75px;
+    left: 251px;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    padding: 2rem 9rem 0 12rem;
+}
+
+.course-box {
+    background-color: white;
+    height: 260px;
+    width: 200px;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: #F545AF 0px 0px 0px 3px; */
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.course-box #a{
+    /* background-color: brown; */
+    height: 40%;
+    padding: 0.5rem;
+    /* box-shadow: #000000 0px 0px 0px 3px; */
+}
+
+.course-box #b {
+    /* background-color: burlywood; */
+    border-top: 1px solid black;
+    height: 60%;
+    padding: 0.5rem;
+    overflow-y: scroll;
+    /* box-shadow: #F545AF 0px 0px 0px 3px; */
+}
+
+.course-box #b::-webkit-scrollbar{
+    width: 8px;
+}
+
+.course-box #b::-webkit-scrollbar-thumb{
+    background-color: transparent;
+}
+
+.course-box:hover #b::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+
+.course-box:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+
+
+
+
+/* .course {
+
     height: 80%;
     width: 80%;
     position: relative;
@@ -26,13 +200,13 @@ body {
 }
 
 .course h3 {
-    /* text-align: center; */
+  
     position: relative;
     left: 14px;
 }
 
 .course-box {
-    /* background-color: aqua; */
+   
     height: 90%;
     position: relative;
     top: 10px;
@@ -40,7 +214,7 @@ body {
 }
 
 .course-self {
-    /* background-color: brown; */
+    
     height: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +225,7 @@ body {
     margin-left: 1rem;
     justify-content: space-evenly;
     align-items: self-start;
-    /* scrollbar-color: black white; */
+ 
 }
 
 .course-self::-webkit-scrollbar {
@@ -93,11 +267,11 @@ body {
 
 .box-img {
     height: 70%;
-    /* background-color:blue; */
+  
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: silver;
-    /* background-image: url("/images/image1.jpg"); */
+   
     background-size: cover;
 }
 
@@ -114,8 +288,7 @@ body {
 }
 
 .box-title {
-    /* position: absolute;
-    top: 50px; */
+   
     font-size: xx-large;
     margin: 0.5rem;
     text-align: center;
@@ -129,11 +302,11 @@ body {
 
 .i div {
     text-align: center;
-}
+} */
 
 /* view-chapter.ejs */
-.view-chapter-course {
+/* .view-chapter-course {
     position: relative;
     top: 40px;
     left: 100px;
-}
+} */

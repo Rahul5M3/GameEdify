@@ -140,6 +140,7 @@ body {
 
 .course-box {
     background-color: white;
+    border-radius: 20px;
     height: 260px;
     width: 200px;
     margin-right: 4rem;

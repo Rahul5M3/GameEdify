@@ -1,0 +1,37 @@
+<% layout('/layouts/boilerplate2.ejs') %>
+
+<div class="content1">
+    <div class="inside1-content1"><%=ques[0].chapter.chapterName%></div>
+    <div class="inside2-content1"><%=ques[0].chapter.course.courseName%></div>
+</div>
+
+<div class="content2">
+    <div class="content2-inside">
+        <div class="content2-a">
+            <div>
+                <% if(ques[0].chapter.course.countQuestion>0) { %>
+                <%=ques[0].chapter.course.countQuestion%>
+                <%} %>
+            </div>
+            <div>Questions</div>
+        </div>
+        <div class="content2-b">
+            <div>
+                
+            </div>
+            <div>Number of Users that answered</div>
+        </div>
+    </div>
+</div>
+
+<div class="content3">
+    <% for(let q of ques){ %>
+    <div class="inside-content3">
+        <!-- <button class="btn1" style="position: absolute;">Click</button> -->
+        <!-- <input type="checkbox" name="checkbox1" id="checkbox1"> -->
+        <div class="inside-content3-1"><%=q.question%></div>
+        <div class="inside-content3-ques"><a href="">Solve it</a></div>
+        <div class="inside-content3-ques-disp"></div>
+    </div>
+    <% } %>
+</div>

@@ -1,0 +1,39 @@
+<% layout('/layouts/boilerplate2.ejs') %>
+
+<div class="content1">
+    <div class="inside1-content1"><%=chapters[0].course.courseName%></div>
+    <div class="inside2-content1"><%=chapters[0].course.aboutCourse%></div>
+</div>
+
+<div class="content2">
+    <div class="content2-inside">
+        <div class="content2-a">
+            <div>
+                <% if(chapters[0].course.chapters.length>0) { %>
+                <%=chapters[0].course.countChapter%>
+                <%} %>
+            </div>
+            <div>Topics</div>
+        </div>
+        <div class="content2-b">
+            <div>
+                <% if(chapters[0].course.questions.length>0) { %>
+                <%=chapters[0].course.countQuestion%>
+                <%} %>
+            </div>
+            <div>Question</div>
+        </div>
+    </div>
+</div>
+
+<div class="content3">
+    <% for(let chapter of chapters){ %>
+    <div class="inside-content3">
+        <!-- <button class="btn1" style="position: absolute;">Click</button> -->
+        <!-- <input type="checkbox" name="checkbox1" id="checkbox1"> -->
+        <div class="inside-content3-1"><%=chapter.chapterName%></div>
+        <div class="inside-content3-ques"><a href="/Gamedify/course/<%=chapter._id%>/question">Questions</a></div>
+        <div class="inside-content3-ques-disp"></div>
+    </div>
+    <% } %>
+</div>

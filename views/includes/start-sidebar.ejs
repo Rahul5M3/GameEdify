@@ -6,9 +6,17 @@
             <a href=""><div id="c"></div></a>
         </div>
     </div>
+    
+    <div id="sidebarpart-31">
+        <div id="sidebar3">
+            <% if(currUser){ %>
+            <a href="#"><%=currUser.username%></a>
+            <% } %>
+        </div>
+    </div>
     <div id="sidebarpart-3">
         <div id="sidebar3">
-            <a href="#">Logout</a>
+            <a href="/Gamedify/logout">Logout</a>
         </div>
     </div>
 </div>

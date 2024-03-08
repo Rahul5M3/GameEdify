@@ -130,12 +130,26 @@ body {
     padding-top: 0.5rem;
 }
 
-#sidebarpart-3 {
+#sidebarpart-31 {
     background-color: white;
     height: 60px;
     width: 90%;
     position: absolute;
     top: 520px;
+    left: 10px;
+    border-radius: 20px;
+}
+
+#sidebarpart-31 a:hover {
+    color: red;
+}
+
+#sidebarpart-3 {
+    background-color: white;
+    height: 60px;
+    width: 90%;
+    position: absolute;
+    top: 590px;
     left: 10px;
     border-radius: 20px;
 }

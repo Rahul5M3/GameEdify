@@ -1,6 +1,16 @@
 let {chapterValidation,questionValidation,courseValidation}=require("./schema.js");
 let ExpressError=require("./utils/expressError.js");
 
+module.exports.isLoggedin=(req,res,next)=>{
+    if(!req.isAuthenticated()){
+        return res.redirect('/Gamedify/login');
+    }else{
+        next();
+    }
+}
+
+// module.exports.printHello=(req,res,nezt)
+
 module.exports.validateCourse=(err,req,res,next)=>{
     let {error}=courseValidation.validate(req.body);
     if(error){

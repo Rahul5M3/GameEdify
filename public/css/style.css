@@ -3,12 +3,18 @@ body {
     font-family: "Anta", sans-serif;
     font-weight: 400;
     font-style: normal;     
+    display: flex;
 }
 
+.container {
+    flex: 1;
+}
 
 /* navbar.ejs */
 .navbar-self {
    height: 100px;
+   position: absolute;
+   top: 0;
    /* top: 40px; */ 
 }
 
@@ -17,8 +23,11 @@ body {
 }
 
 .navbar-sticky {
-    position: sticky;
-    top: 0px;
+    position: absolute;
+    /* top: 10px; */
+    /* left: 260px; */
+    height: 100px;
+    width: 100%;
     z-index: 1;
 }
 
@@ -101,7 +110,7 @@ body {
 }
 
 /* signup.ejs */
-.sign {
+/* .sign {
     background-color: #00008B;
     height: 360px;
     position: relative;
@@ -112,24 +121,8 @@ body {
     background-image: url("https://s3-alpha-sig.figma.com/img/95c9/4dd2/8d5fc00d8442222571b2b7f0a27c2c3a?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W2aFNeEVGevaJbuc5d6gsOiaZKyQ9FNudHXQAOPTEpUHKlxvSScw7FKgsxg-r4iXKuj00xsaPaDjT9jAiyyVrXjirwviPXUxm7YIa22Uc2eATrataTouHlYdnoID-z8~wKmu1MN4VkdvXcTCDfx-CtoFiGZXTeJWgXoINdK6vnaxMZ4TuSz0Gt2rgZFeb5gB1VN2uxzX22XiexbXGB72NhgExYgbfA7JeIxaS-jCh68JpCN3cIP25LvPG1qBD7AR5ncIgF9nn~SSO43NXOohi~i9ona9A~eESVBMjYz-d6WGKA1-cxYs3UbFy-4dmQLe52vXwmkdFdij6-QBUdPEJA__");
     background-size: cover;
     opacity: 70%;
-}
+} */
 
-.sign-content {
-    position: absolute;
-    top: 180px;
-    left: 380px;
-}
-
-.sign-content label {
-    font-weight: bolder;
-}
-
-.sign-icon i {
-    font-size: 200px;
-    position: absolute;
-    top: 240px;
-    left: 800px;
-}
 
 /* userInfo.ejs */
 .wrapper {
@@ -236,4 +229,10 @@ body {
 
 .g {
     background-color: teal;
+}
+
+/* signup.ejs */
+.signup {
+    position: relative;
+    top: 160px;
 }

@@ -1,0 +1,31 @@
+<% layout("/layouts/boilerplate2.ejs") %>
+
+<div id="solveform">
+    <div class="row" style="color: white;">
+        <div class="col-9 offset-2">
+            <br><br>
+            <h3>Question Solving</h3>
+            <br>
+
+            <div class="mb-4" >
+                <label for="title" class="form-label">Question</label>
+                <input type="text" name="listing[title]" placeholder="<%=ques.question%>" class="form-control" readonly>
+            </div>
+
+            <form action="/Gamedify/course/<%=ques._id%>/ans" method="get" novalidate class="needs-validation" >
+                
+                <div  style="margin-top: 4rem; margin-bottom: 2rem;">
+                    <% for(let opt of ques.options){ %>
+                    <input type="radio" name="opti" id="<%=opt%>" value="<%=opt%>" required>
+                    <label for="<%=opt%>" class="form-label"><%=opt%></label>
+                    <br>
+                    <% } %>
+                    <div class="invalid-feedback">Select Answer</div>
+                </div>
+                <br>
+                <button class="btn btn-dark add-btn">Submit</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</div>

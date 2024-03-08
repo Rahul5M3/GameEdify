@@ -22,4 +22,22 @@ router.get("/:id/question",wrapAsync(async(req,res)=>{
     res.render('start/web-question.ejs',{ques});
 }))
 
+router.get('/:quesId/solve',wrapAsync(async (req,res)=>{
+    let ques=await Question.findById({_id:req.params.quesId});
+    // res.send("solve");
+    res.render("start/web-ques-solve.ejs",{ques});
+}))
+
+router.get('/:queId/ans',async(req,res)=>{
+    let {opti}=req.query;
+    const que=await Question.findOne({_id:req.params.queId});
+    if(que.answer==opti){
+        req.flash('success',"Solved Correctly ...... Congrats  1 point added");
+       return res.redirect(`/Gamedify/course/${que.chapter}/question`);
+    }
+    req.flash('error',"Incorrect Answer");
+    return res.redirect(`/Gamedify/course/${req.params.queId}/solve`);
+})
+
+
 module.exports=router;

@@ -1,13 +1,13 @@
 <%  if((success && success.length)){  %>
 <div class="alert alert-success alert-dismissible fade show  flash2" role="alert" >
     <%=success%>
-    <button type="button" class="btn-close" style="position: relative; bottom: 6px; left: 75%;" data-bs-dismiss="alert" aria-label="Close"></button>
+    <button type="button" class="btn-close flash-btn"  data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <% } %>
 
 <%  if((error && error.length)){  %>
     <div class="alert alert-danger alert-dismissible fade show flash2" role="alert">
         <%=error%>
-        <button type="button" class="btn-close btn_close" style="position: relative; bottom: 6px; left: 20%;"  data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close btn_close flash-btn"   data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 <% } %>

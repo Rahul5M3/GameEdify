@@ -20,13 +20,22 @@
     <%- include('../includes/start-sidebar.ejs') %>
     <%- include("../includes/flash.ejs") %>
     <div class="big-container">
+        <div class="searchoption">
+            <form action="/Gamedify/search" method="get">
+                <input type="text" name="s" id="search1" placeholder="search course ......" required>
+                <button class="searchbtn">Search</button>
+            </form>
+        </div>
+        
         <a href="/Gamedify/logout"><div style="position: absolute; top: 620px; left: 25px; z-index: 1; " class="logoutBTN"><button style="border-radius: 20px; height: 80px; width: 150px;">Logout</button></div></a>
 <div class="explore-1">
+    <% if(courses.length>0){ %>
     <% for(let course of courses){ %>
     <a href="/Gamedify/course/<%=course._id%>/chapter"><div class="course-box ">
             <div id="a"><div class="insidea"><b><%=course.courseName%></b></div></div>
             <div id="b"><%=course.aboutCourse%></div>
     </div> </a>
+    <% } %>
     <% } %>
 </div>
 </div>

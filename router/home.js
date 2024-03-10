@@ -24,8 +24,15 @@ router.get('/user',isLoggedin,((req,res)=>{
     res.render('home/userInfo.ejs');
 }))
 
+router.get('/search', async(req,res)=>{
+    let {s}=req.query;
+    let courses=await Course.find({courseName:s});
+    // res.send(courses);
+    res.render('home/explore.ejs',{courses});
+})
+
 router.get('/explore',isLoggedin, wrapAsync(async (req,res)=>{
-    console.log(req.user);
+    // console.log(req.user);
     let courses=await Course.find({}).populate('chapters').populate('questions');
     req.flash("success","Welcome");
     // res.send('hhfhf');

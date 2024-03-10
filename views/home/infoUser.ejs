@@ -27,9 +27,97 @@
 
     <div class="infoUser">
         <div class="inside-infoUser">
+            <div class="disp1" id="section3">
+                <h2><b>Correct Question</b></h2>
+                <% if(user.correctQues.length<=0) { %>
+                    <div class="cccccc">No Question done till yet or not correct till yet</div>
+                    <%  } %>
+                <div class="row">
+                    <% for(let cq of user.correctQues){ %>
+                    <div class="  p-2">
+                        <div class="dsh_stats_w">
+                        <div class="stats_head">
+                        <h2>Correct Question</h2>
+                        
+                        <div class="stat_sub_hed">
+                        <span>Total Questions: <b><%=user.correctQues.length%></b></span>
+                        </div>
+                        
+                        </div>
+                         
+                         
+                        <div class="dsh_content">
+                        <div class="dsh_table_ot">
+                        <table width="100%" border="0" class="table">
+                        <thead>
+                        <tr>
+                        <!-- <th width="60%">Question</th> -->
+                        </tr>
+                        </thead>
+                        
+                        <tbody>
+                       
+                        <tr>
+                        <td><%=cq.question%></td>
+                        
+                        </tr>
+                        
+                        </tbody>
+                        </table>
+                        </div> 
+                         </div>
+                          </div>
+                        </div>
+                    <% } %>    
+              </div>
+            </div>
+            <div class="disp2" id="section4">
+                <h2><b>IncorrectQuestion</b></h2>
+                <% if(user.incorrectQues.length<=0) { %>
+                    <div class="cccccc">No incorrect question</div>
+                    <%  } %>
+                <div class="row">
+                    <% for(let iq of user.incorrectQues){ %>
+                    <div class="  p-2">
+                        <div class="dsh_stats_w">
+                        <div class="stats_head">
+                        <h2>Incorrect Question</h2>
+                        
+                        <div class="stat_sub_hed">
+                        <span>Total Questions: <b><%=user.incorrectQues.length%></b></span>
+                        </div>
+                        
+                        </div>
+                         
+                         
+                        <div class="dsh_content">
+                        <div class="dsh_table_ot">
+                        <table width="100%" border="0" class="table">
+                        <thead>
+                        <tr>
+                        <!-- <th width="60%">Question</th> -->
+                        </tr>
+                        </thead>
+                        
+                        <tbody>
+                       
+                        <tr>
+                        <td><%=iq.question%></td>
+                        
+                        </tr>
+                        
+                        </tbody>
+                        </table>
+                        </div> 
+                         </div>
+                          </div>
+                        </div>
+                    <% } %>    
+              </div>
+            </div>
             <div class="Aa">
                 <div class="ia ">
-                    <div class="display1">
+                    <div class="display1" >
                         <% if(user.correctQues.length<=0) { %>
                             <div class="cccccc">No Question done till yet or not correct till yet</div>
                             <%  } %>
@@ -72,7 +160,7 @@
                             <% } %>    
                       </div>
                     </div>
-                    <div class="display2">
+                    <div class="display2" >
                         <% if(user.incorrectQues.length<=0) { %>
                             <div class="cccccc">No incorrect question</div>
                             <%  } %>
@@ -116,7 +204,7 @@
                       </div>
                     </div>
                     <div class="qqqq display3" id="aaaa">
-                        <div>
+                        <div id="section1">
                             <div id="img">img</div>
                            <h4> Username : </h4><div id="username">@<%=user.username%></div>
                         </div>
@@ -125,7 +213,7 @@
                     <div class="qqqq1 display3" id="bbbb"></div>
                     <!-- <div class="qqqq display3" id="cccc"></div> -->
                 </div>
-                <div class="ib">
+                <div class="ib" id="section2">
 
                     <div class="SSS">
                     <div class="acc_box dashb_bx">
@@ -174,14 +262,19 @@
             <div class="Bb">
                 <div class="ibb">
                     <a href="/Gamedify/explore"><div class=" bbbb" >DashBoard</div></a>
-                    <div class="dashboard  bbbb" onclick="display3()">User</div>
-                    <div class="correct bbbb" onclick="display1()">Correct Question</div>
-                    <div class="incorrect bbbb" onclick="display2()">Incorrect Question</div>
+                    <a href="#section1" onclick="visiteThis('section1')"><div class="dashboard  bbbb"  >User</div></a>
+                    <a href="#section2" onclick="visiteThis('section2')"><div class=" bbbb" >Info</div></a>
+                    <a href="#section3" onclick="visiteThis('section3')"><div class="correct bbbb" >Correct Question</div></a>
+                    <a href="#section4" onclick="visiteThis('section4')"><div class="incorrect bbbb" >Incorrect Question</div></a>
                     <a href="/Gamedify/logout"><div class=" bbbb" >Logout</div></a>
                 </div>
             </div>
         </div>
+
+        <div class="footer">Try doing questions and earn points</div>
     </div>
+
+    <div class="blockUser"><b>User Profile </b> &nbsp;&nbsp;  Only able to see in mobile web browser</div>
 
 
 

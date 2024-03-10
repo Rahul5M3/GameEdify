@@ -84,3 +84,10 @@ function showAnsForQues(){
     document.getElementById('seeAns').style.color="green";
     document.getElementById('ansbtn').style.display="none";
 }
+
+function visiteThis(sectionId){
+    let section=document.getElementById(sectionId);
+    if(section){
+        section.scrollIntoView({behavior:'smooth'});
+    }
+}

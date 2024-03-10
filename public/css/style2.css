@@ -197,6 +197,10 @@ body {
     color: red;
 }
 
+.logoutBtn {
+    display: none;
+}
+
 /* explore.ejs */
 .explore-1{
     /* background-color: black; */
@@ -210,7 +214,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     /* justify-content: space-between; */
-    padding: 2rem 7rem 0 6rem;
+    padding: 6rem 7rem 0 6rem;
 }
 
 .explore-1 a {
@@ -283,8 +287,38 @@ body {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+.searchoption {
+    position: absolute;
+    top: 10px;
+    left: 450px;
+    width: 200px;
+    width: 100px;
+}
+
+.searchoption input {
+    border-radius: 20px;
+    padding-left: 0.5rem;
+}
+
+.searchbtn {
+    position: absolute;
+    left: 220px;
+    top: 0px;
+    border-radius: 20px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
 /* media setting */
 @media screen and (max-width: 340px) {
+
+    .searchoption {
+        /* display: none; */
+        position: absolute;
+        left: 18px;
+        top: 290px;
+        z-index: 1;
+    }
 
     body {
         height: 100vh;
@@ -572,7 +606,6 @@ body {
         left: 80px;
         /* top: 10px; */
     }
-
     
 }
 

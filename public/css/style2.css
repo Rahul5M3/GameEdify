@@ -5,7 +5,7 @@ body {
     font-style: normal;    
     overflow: hidden; 
     display: flex;
-    /* background-color: #E9EAEC; */
+    /* background-color: black; */
 }
 
 .big-container {
@@ -47,7 +47,7 @@ body {
 /* start-sidebar.ejs */
 .Sidebar {
     /* background-color: #00008B; */
-    background-color: #ACADA8;
+    background-color: #393939;
     /* height: 100vh; */
     height: 100%;
     width: 197px;
@@ -219,7 +219,7 @@ body {
 
 .course-box {
     /* background-color: white; */
-    background-color: #E8E9EB;
+    background-color: #393939;
     border-radius: 20px;
     height: 260px;
     width: 200px;
@@ -228,9 +228,9 @@ body {
     display: flex;
     flex-direction: column;
     /* box-shadow: #F545AF 0px 0px 0px 3px; */
-    border: 1px solid black;
+    border: 1px solid #FF5F1F;
     transform: scale(1);
-    box-shadow: rgba(84, 241, 60, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(79, 4, 4, 0.05) 0px 0px 0px 1px inset;
+    box-shadow: #FF5F1F 0px 12px 28px 0px, #FF5F1F 0px 2px 4px 0px, #FF5F1F 0px 0px 0px 1px inset;
 }
 
 .course-box #a{
@@ -258,9 +258,10 @@ body {
     /* background-color: burlywood; */
     /* border-top: 1px solid black; */
     height: 60%;
-    padding: 0.5rem;
+    padding: 0.7rem;
     overflow-y: scroll;
     /* box-shadow: #F545AF 0px 0px 0px 3px; */
+    color: white;
 }
 
 .course-box #b::-webkit-scrollbar{
@@ -293,6 +294,10 @@ body {
         display: flex;
         flex-direction: column;
         /* background-color: #E9EAEC; */
+    }
+
+    .logoutBTN {
+        display: none;
     }
     
     .big-container {
@@ -510,6 +515,7 @@ body {
         height: 60%;
         padding: 0.5rem;
         overflow-y: scroll;
+        color: black;
         /* box-shadow: #F545AF 0px 0px 0px 3px; */
     }
 

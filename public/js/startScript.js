@@ -24,12 +24,16 @@ document.addEventListener('DOMContentLoaded',()=>{
             if (content) {
                 setTimeout(() => {
                     content.style.display = 'block';
-                }, 800);
+                }, 1000);
+                // content.style.display = 'block';
             }
         });
         element.addEventListener('mouseout', function() {
             let content = element.querySelector('.contentP');
             if (content) {
+                // setTimeout(() => {
+                //     content.style.display = 'none';
+                // }, 1000);
                 content.style.display = 'none';
             }
         });

@@ -1,0 +1,446 @@
+body {
+    /* padding: 0; */
+    padding: 2rem;
+    display: flex;
+    /* background-color:#CCCDC6; */
+    /* overflow: hidden; */
+}
+
+.infoUser {
+    flex: 1;
+}
+
+.inside-infoUser {
+    height: 650px;
+    width: 95%;
+    background-color:#CCCDC6;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    display: flex;
+    padding: 0.5rem;
+
+}
+
+.Aa {
+    /* background-color: aqua; */
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+}
+
+.Bb {
+    /* background-color: antiquewhite; */
+    height: 100%;
+    /* width: 20%; */
+    flex: 1;
+    border-radius: 20px;
+    /* margin: 1rem; */
+    padding: 1rem;
+    border-left: 1px solid black;
+}
+
+.ia {
+    /* background-color: blueviolet; */
+    width: 100%;
+    flex: 2;
+    border-radius: 20px;
+    display: flex;
+    padding: 0.5rem;
+}
+.ib {
+    /* background-color: yellow; */
+    width: 100%;
+    flex: 1;
+    border-radius: 20px;
+    display: flex;
+    padding: 0.4rem;
+    align-items: center;
+}
+.SSS {
+    width: 36%;
+    margin-right: 0.4rem;
+}
+
+.qqqq {
+    /* background-color: cadetblue; */
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+#aaaa div {
+    height: 370px;
+    width: 24%;
+    /* background-color: black; */
+    position: absolute;
+    top: 66px;
+    left: 10px;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+}
+
+.qqqq1 {
+    background-color: cadetblue;
+    flex: 2;
+    margin-right: 0.5rem;
+}
+
+.ibb {
+    /* background-color: brown; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.bbbb {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 0.4rem;
+    border-radius: 40px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 900;
+}
+
+.dashboard {
+    opacity: 0.6;
+}
+.correct {
+    opacity: 0.6;
+}
+.incorrect {
+    opacity: 0.6;
+}
+
+.dashboard:hover {
+    opacity: 1;
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+    border-radius: 0;
+    margin-bottom: 1rem;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.correct:hover {
+    opacity: 1;
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+    border-radius: 0;
+    margin-bottom: 1rem;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 1rem;
+}
+.incorrect:hover {
+    opacity: 1;
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+    border-radius: 0;
+    margin-bottom: 1rem;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 1rem;
+}
+
+.display1 {
+    /* background-color: blue; */
+    height: 400px;
+    width: 60%;
+    position: absolute;
+    display: none;
+    overflow-y: scroll;
+    background-color: #CCCDC6;
+}
+
+.display2 {
+    /* background-color: green; */
+    height: 400px;
+    width: 60%;
+    position: absolute;
+    display: none;
+    overflow-y: scroll;
+    background-color: #CCCDC6;
+}
+
+.cccccc {
+    font-size: larger;
+    font-weight: bold;
+    color: red;
+}
+
+#aaaa #img {
+    background-color: black;
+    color: white;
+    height: 60%;
+    width: 80%;
+    position: relative;
+    top: 6px;
+    left: 60px;
+    text-align: center;
+}
+
+#aaaa #username {
+    height: 60px;
+    width: 40%;
+    background-color: white;
+    color: black;
+    position: relative;
+    top: 30px;
+    left: 120px;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+} 
+
+#aaaa h4 {
+    position: relative;
+    top: 20px;
+    left: 120px;
+    /* width: 10%; */
+}
+
+
+/* for screen of size 326 -------------------------------------------------------------------------------*/
+@media screen and (max-width: 326px) {
+
+    body {
+        /* padding: 0; */
+        padding: 1rem;
+        display: flex;
+        /* background-color:#CCCDC6; */
+        /* overflow: hidden; */
+    }
+    
+    .infoUser {
+        flex: 1;
+        /* height: 100%; */
+        /* width: 100%; */
+    }
+
+    .inside-infoUser {
+        height: 630px;
+        width: 326px;
+        background-color:#CCCDC6;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    
+    }
+    
+    .Aa {
+        /* background-color: aqua; */
+        width:240px;
+        height: 100px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 0.3rem;
+        width: 100%;
+    }
+    
+    .Bb {
+        /* background-color: antiquewhite; */
+        height: 60px;
+        width: 300px;
+        /* flex: 1; */
+        border-radius: 20px;
+        /* margin: 1rem; */
+        padding: 0.5rem;
+        /* padding-top: rem; */
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+    
+    .ia {
+        /* background-color: blueviolet; */
+        width: 310px;
+        height: 100px;
+        /* flex: 1; */
+        border-radius: 20px;
+        display: flex;
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+    .ib {
+        /* background-color: yellow; */
+        width: 240px;
+        /* flex: 1; */
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 0.4rem;
+        align-items: center;
+    }
+    .SSS {
+        width: 66%;
+        margin-right: 1rem;
+        /* margin-bottom: 2rem; */
+        margin-top: 2rem;
+    }
+    
+    .qqqq {
+        /* background-color: cadetblue; */
+        flex: 1;
+        margin-right: 0.5rem;
+    }
+    
+    #aaaa div {
+        height: 170px;
+        width: 24%;
+        /* background-color: black; */
+        position: absolute;
+        top: 66px;
+        left: 10px;
+        margin-bottom: 1rem;
+        border-radius: 20px;
+    }
+    
+    .qqqq1 {
+        background-color: cadetblue;
+        flex: 2;
+        margin-right: 0.5rem;
+        border-radius: 20px;
+    }
+    
+    .ibb {
+        /* background-color: brown; */
+        height: 40px;
+        width: 240px;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    
+    .bbbb {
+        height: 40px;
+        width: 240px;
+        background-color: white;
+        margin-bottom: 0.4rem;
+        border-radius: 40px;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: larger;
+        font-weight: 900;
+    }
+    
+    .dashboard {
+        opacity: 0.6;
+    }
+    .correct {
+        opacity: 0.6;
+    }
+    .incorrect {
+        opacity: 0.6;
+    }
+    
+    .dashboard:hover {
+        opacity: 1;
+        background-color: black;
+        color: white;
+        transform: scale(1.1);
+        border-radius: 0;
+        margin-bottom: 1rem;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .correct:hover {
+        opacity: 1;
+        background-color: black;
+        color: white;
+        transform: scale(1.1);
+        border-radius: 0;
+        margin-bottom: 1rem;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-top: 1rem;
+    }
+    .incorrect:hover {
+        opacity: 1;
+        background-color: black;
+        color: white;
+        transform: scale(1.1);
+        border-radius: 0;
+        margin-bottom: 1rem;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        margin-top: 1rem;
+    }
+    
+    .display1 {
+        /* background-color: blue; */
+        height: 100px;
+        width: 316px;
+        position: absolute;
+        display: none;
+        overflow-y: scroll;
+        background-color: #CCCDC6;
+    }
+    
+    .display2 {
+        /* background-color: green; */
+        height: 100px;
+        width: 316px;
+        position: absolute;
+        display: none;
+        overflow-y: scroll;
+        background-color: #CCCDC6;
+    }
+    
+    .cccccc {
+        font-size: larger;
+        font-weight: bold;
+        color: red;
+    }
+    
+    #aaaa #img {
+        background-color: black;
+        color: white;
+        height:100px;
+        width: 100px;
+        position: relative;
+        top: 6px;
+        left: 40px;
+        text-align: center;
+    }
+    
+    #aaaa #username {
+        height: 20px;
+        width: 60px;
+        background-color: white;
+        color: black;
+        position: relative;
+        top: 30px;
+        left: 80px;
+        padding: 1rem;
+        text-align: center;
+        font-weight: bolder;
+        font-size: larger;
+    } 
+    
+    #aaaa h4 {
+        position: relative;
+        top: 54px;
+        left: 72px;
+        /* width: 10%; */
+    }
+    
+}

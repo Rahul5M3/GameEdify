@@ -1,15 +1,22 @@
-<div class="sidebar">
-    <div class="sidebar-heading">
-            <h3>Admin</h3>  
+
+<nav id="sidebar">
+    <div class="sidebar_menu">
+    <div class="p-3">
+    <div class="fs17 weight600">Gamedify</div>
+    <div class="fs13 mt-1">Role: Admin</div>
     </div>
-    <div class="Detail">
-        <div class="outer-detail">
-            <div class="inner-detail">
-                <div class="info"><a href="/Gamedify/admin">DashBoard</a></div>
-                <div class="info"><a href="/Gamedify/admin/view/course">Course</a></div>
-                <div class="info"><a href="/Gamedify/admin/view/chapter">Chapter </a></div>
-                <div class="info"><a href="/Gamedify/admin/view/question">Question</a></div>
-            </div>
-        </div>
-    </div> 
-</div>
+   
+    
+    <ul class="list-unstyled components">
+    <li class="active"><a href="/Gamedify/admin">Dashboard</a></li>
+    <li><a href="#menu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Course Management</a>
+    
+    <ul class="collapse dd-menu list-unstyled" id="menu1">
+    <li><a href="/Gamedify/admin/course/new" title="">New Course</a></li>
+    <li><a href="/Gamedify/admin/view/course" title="">View Course</a></li>
+    </ul>
+    </li>
+    <li class="active"><a href="/Gamedify/admin/view/chapter">Chapter</a></li>
+    <li class="active"><a href="/Gamedify/admin/view/question">Question</a></li>
+    
+    </nav>

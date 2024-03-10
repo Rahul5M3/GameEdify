@@ -1,5 +1,5 @@
 <div class="Sidebar">
-    <div id="sidebarpart-1"><a class="navbar-brand" href="/Gamedify">Gamedify</a></div>
+    <div id="sidebarpart-1"><a class="navbar-brand" href="/Gamedify/explore">Gamedify</a></div>
     <div id="sidebarpart-2">
         <div id="a">
             <a href="/Gamedify/explore"><div id="b">Explore</div></a>
@@ -10,7 +10,7 @@
     <div id="sidebarpart-31">
         <div id="sidebar3">
             <% if(currUser){ %>
-            <a href="#"><%=currUser.username%></a>
+            <a href="/Gamedify/userInfo">@<%=currUser.username%></a>
             <% } %>
         </div>
     </div>

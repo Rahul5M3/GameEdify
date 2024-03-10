@@ -14,6 +14,10 @@ const userSchema=new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:'Question'
     }],
+    ansSaw:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Question'
+    },
     points:{
         type:Number,
         default:0,

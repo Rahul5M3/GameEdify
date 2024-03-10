@@ -11,15 +11,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
+
     <link rel="stylesheet" href="/css/adminStyle.css">
+    <link href="/css/conditional-preet.css" type="text/css" rel="stylesheet">
 
     <title>Gamedify Admin</title>
 </head>
 <body>
 
-    <%- include('../includes/adminNavbar.ejs') %>
-    <%- include('../includes/adminSidebar.ejs') %>
-     <%- body %>
+    <%-include('../includes/adminNavbar.ejs') %>
+    <%-include('../includes/adminSidebar.ejs') %>
+
+    <div class="container">
+        <%- body %>
+    </div>
+
+     
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
+  <script type="text/javascript">
+  // Load google charts
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  
+  // Draw the chart and set the chart values
+  function drawChart() {	
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Orders'],
+  ['Pending', 8],
+  ['Ready To Dispatch', 2],
+  ['Dispatched', 4],
+  ['Delivered', 2],
+  ['Closed', 8],
+  ['Canceled', 8],
+  ['Rejected', 8],
+  ['Deleted', 8]
+  ]);
+  
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'', 'width':450, 'height':300,pieHole: 0.4};
+  
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);}
+  
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript">var Page='dashboard';</script> 
+  <script type="text/javascript" src="Scripts/script.int.dg.js"></script>
 
     <script src="/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

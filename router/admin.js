@@ -4,6 +4,7 @@ const router=express.Router({mergeParams:true});
 const Course=require('../models/course.js');
 const Question=require('../models/question.js');
 const Chapter=require('../models/chapter.js');
+const User=require("../models/user.js");
 const {validateCourse}=require('../middleware.js');
 const wrapAsync=require("../utils/wrapAsync.js");
 
@@ -11,7 +12,14 @@ router.get("/",async (req,res)=>{
     let totalCourse=await Course.countDocuments({});
     let totalChapter=await Chapter.countDocuments({});
     let totalQuestion=await Question.countDocuments({});
-    res.render("admin/admin-page.ejs",{totalCourse,totalChapter,totalQuestion});
+    let totalUser=await User.countDocuments({});
+    let courses=await Course.find({});
+    let chapters=await Chapter.find({});
+    let questions=await Question.find({});
+    let recentCourses=await Course.find().sort({_id:-1}).limit(2);
+    let recentChapter=await Chapter.find().sort({_id:-1}).limit(3);
+    let recentQuestion=await Question.find().sort({_id:-1}).limit(3);
+    res.render("admin/admin-page.ejs",{totalCourse,totalChapter,totalQuestion,totalUser,courses,chapters,questions,recentCourses,recentChapter,recentQuestion});
 })
 
 router.get('/course/new',wrapAsync((req,res)=>{

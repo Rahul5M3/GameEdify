@@ -28,15 +28,13 @@
 </div>
 
 <div class="content3">
-    <% for(let chapter of chapters){ %>
+    <% for(let i=0; i<chapters.length; i++){ %>
     <div class="inside-content3">
-        <!-- <button class="btn1" style="position: absolute;">Click</button> -->
-        <!-- <input type="checkbox" name="checkbox1" id="checkbox1"> -->
-        <div class="inside-content3-1"><%=chapter.chapterName%></div>
+        <div class="inside-content3-1"><%=chapters[i].chapterName%></div>
         <div class="inside-content3-ques" id="inside-content3-ques">
-            <a href="/Gamedify/course/<%=chapter._id%>/question">Questions</a>
+            <a href="/Gamedify/course/<%=chapters[i]._id%>/question">Questions</a>
         </div>
-        <div class="inside-content3-ques-disp"></div>
+        <p class="contentP">Click Questions for visiting this topic questions</p>
     </div>
     <% } %>
 </div>

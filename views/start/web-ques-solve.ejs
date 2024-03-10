@@ -1,5 +1,10 @@
 <% layout("/layouts/boilerplate2.ejs") %>
 
+<script>
+    let currElementDiv=null;
+    let radioButton=null;
+</script>
+
 <div id="solveform">
     <div class="row" style="color: white;">
         <div class="col-9 offset-2">
@@ -9,23 +14,34 @@
 
             <div class="mb-4" >
                 <label for="title" class="form-label">Question</label>
-                <input type="text" name="listing[title]" placeholder="<%=ques.question%>" class="form-control" readonly>
+                <textarea type="text" name="listing[title]" placeholder="<%=ques.question%>" class="form-control" readonly></textarea>
             </div>
 
             <form action="/Gamedify/course/<%=ques._id%>/ans" method="get" novalidate class="needs-validation" >
                 
                 <div  style="margin-top: 4rem; margin-bottom: 2rem;">
+                <div class="allOption">
                     <% for(let opt of ques.options){ %>
-                    <input type="radio" name="opti" id="<%=opt%>" value="<%=opt%>" required>
-                    <label for="<%=opt%>" class="form-label"><%=opt%></label>
-                    <br>
+                        <div  class="ansTick" onclick="changeColor(this)">
+                            <input type="radio"  class="radiobtn" name="opti" id="<%=opt%>" value="<%=opt%>" required>
+                            <label for="<%=opt%>" class="form-label optContent"><%=opt%></label>
+                        </div>
+                    <!-- <br> -->
                     <% } %>
+                </div>
                     <div class="invalid-feedback">Select Answer</div>
                 </div>
                 <br>
                 <button class="btn btn-dark add-btn">Submit</button>
                 <br><br>
             </form>
+            <!-- <form action="">
+                button
+            </form> -->
+            <% if(error && error.length){%>
+            <button id="ansbtn" onclick="showAnsForQues()">See ans</button>
+            <p id="seeAns"><%=ques.answer%></p>
+            <% } %>
         </div>
     </div>
 </div>

@@ -122,12 +122,13 @@ body {
     flex-direction: column;
     border: 2px solid black;
     border-radius: 20px;
-    animation: 4s linear 0s boxLength ;
-    animation-fill-mode:forwards;
+    animation: all 1s ease-in-out;
 }
 
 .inside-content3:hover {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    animation: 1s linear 0s boxLength ;
+    animation-fill-mode:forwards;
 }
 
 @keyframes boxLength {
@@ -149,6 +150,10 @@ body {
     font-weight: 900;
 }
 
+.inside-content3 p {
+    padding: 0.5rem;
+    display: none;
+}
 
 .inside-content3-ques {
     /* background-color: blue; */
@@ -179,12 +184,46 @@ body {
 
 /* web-ques-solve */
 #solveform {
-    background-color: black;
-    height: 650px;
-    width: 60%;
+    /* background-color: black; */
+    background-color: #CCCDC6;
+    height: 665px;
+    width: 100%;
     position: relative;
-    top: 80px;
-    left: 200px;
+    top: 64px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.allOption {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    cursor: pointer;
+}
+
+.ansTick {
+    height: 60px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    border-radius: 40px;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.clicked {
+    background-color: green;
+}
+
+.radiobtn{
+    /* display: none; */
+    cursor: pointer;
 }
 
 .flash2 {
@@ -195,5 +234,268 @@ body {
 .flash-btn {
     position: relative;
     top: 6px;
-    left: 1330px;
+    left: 1280px;
+}
+
+#seeAns {
+    display: none;
+}
+
+.logoutBtn {
+    position: relative; 
+    left: 1050px; 
+    border-radius:20px;
+    bottom: 4px;
+}
+
+
+/* for media screen 326 */
+@media screen and (max-width:326px) {
+    body {
+        height: 100vh;
+        font-family: "Anta", sans-serif;
+        font-weight: 400;
+        font-style: normal;    
+        /* overflow: hidden;  */
+        display: flex;
+        /* background-color: #E9EAEC; */
+    }
+    
+    .big-container {
+        flex: 1;
+        /* background-color: aqua; */
+    } 
+    
+    .start-navbar {
+        border-bottom: 1px solid black;
+        position: fixed;
+        top: 0;
+        height: 64px;
+        width: 320px;
+        /* margin-bottom: 2rem; */
+        /* padding-bottom: ; */
+        z-index: 2;
+    }
+    
+    /* web-chapter.ejs */
+    .content1 {
+        background-color: black;
+        height: 270px;
+        width: 320px;
+        position: relative;
+        top: 50px;
+    }
+    
+    
+    .inside1-content1 {
+        /* background-color: aqua; */
+        height: 60px;
+        width: 160px;
+        position: relative;
+        top: 50px;
+        left: 40px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        color: white;
+        font-size: larger;
+        font-weight: bold;
+    }
+    
+    .inside2-content1 {
+        /* background-color: aquamarine; */
+        height: 80px;
+        width: 180px;
+        position: relative;
+        top: 80px;
+        left: 40px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        color: white;
+    }
+    
+    .content2 {
+        /* background-color: blueviolet; */
+        height: 150px;
+        position: relative;
+        top: 32px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .content2-inside {
+        /* background-color: antiquewhite; */
+        margin: 1rem;
+        height: 100px;
+        position: relative;
+        top: 30px;
+        display: flex;
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    }
+    
+    .content2-a {
+        flex: 1;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        margin-right: 0.5rem;
+        font-weight: bold;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        align-items: center;
+    }
+    
+    .content2-b {
+        flex: 1;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        font-weight: bold;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        align-items: center;
+    }
+    
+    .content3 {
+        /* background-color: brown; */
+        height: 300px;
+        position: relative;
+        top: 100px;
+        left: 30px;
+        width: 80%;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .inside-content3 {
+        /* background-color: aqua; */
+        height: 120px;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+    
+    .inside-content3:hover {
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        animation: 1s linear 0s boxLength ;
+        animation-fill-mode:forwards;
+    }
+    
+    @keyframes boxLength {
+        0%{
+          /* pushes the sun down past the viewport */
+          height: 120px;
+        }
+        100% {
+          /* returns the sun to its default position */
+          height: 180px;
+        }
+      }
+    
+    .inside-content3-1 {
+        /* background-color: antiquewhite; */
+        flex:1;
+        border-bottom: 1px solid black;
+        padding: 1rem;
+        font-weight: 900;
+    }
+    
+    .inside-content3 p {
+        padding: 0.5rem;
+        display: none;
+    }
+    
+    .inside-content3-ques {
+        /* background-color: blue; */
+        flex:1;
+        padding: 0.5rem;
+        animation: 4s linear 0s boxNew ;
+        animation-fill-mode:forwards;
+    }
+    
+    @keyframes boxNew {
+        0%{
+            flex: 1;
+        }
+        50% {
+            flex: 2;
+        }
+        100%{
+            flex: 3;
+        }
+    }
+    
+    .inside-content3-ques-disp {
+        /* height: 100px; */
+        flex: 1;
+        background-color: yellow;
+        display: none;
+    }
+    
+    /* web-ques-solve */
+    #solveform {
+        /* background-color: black; */
+        background-color: #CCCDC6;
+        height: 599px;
+        width: 320px;
+        position: relative;
+        top: 64px;
+        left: 0px;
+        overflow: hidden;
+    }
+    
+    .allOption {
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+        cursor: pointer;
+    }
+    
+    button {
+        position: relative;
+        bottom: 40px;
+    }
+
+    .ansTick {
+        height: 40px;
+        width: 190px;
+        background-color: white;
+        color: black;
+        border-radius: 40px;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        padding: 1rem;
+        font-weight: bold;
+        text-align: left;
+        cursor: pointer;
+    }
+    
+    
+    
+    .clicked {
+        background-color: green;
+    }
+    
+    .radiobtn{
+        /* display: none; */
+        cursor: pointer;
+    }
+    
+    .flash2 {
+        position: relative;
+        top: 60px;
+    }
+    
+    .flash-btn {
+        position: relative;
+        top: 6px;
+        left: 260px;
+    }
+    
+    #seeAns {
+        display: none;
+    }
+    
 }

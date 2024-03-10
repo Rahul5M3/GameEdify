@@ -1,36 +1,327 @@
-<% layout('/layouts/adminBoilerplate.ejs') %>
-
-<!-- <a href="/Gamedify/admin/course/new"><button>Add New Course</button></a>
-<a href="/Gamedify/admin/view/course"><button>View Course</button></a>
-<a href="/Gamedify/admin/view/chapter"><button>View chapter </button></a>
-<a href="/Gamedify/admin/view/question"><button>View Question </button></a> -->
-
-<div class="admin-first-page">
-        <div class="boxes-info">
-            <div class="info-box">
-                <div class="inside-info-box">
-                    <div id="inside">Courses</div>
-                    <div id="inside2"><h4><%=totalCourse%></h4></div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no;user-scalable=0;"/>
+    <title>Welcome</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800">
+    <link href="/css/conditional-preet.css" type="text/css" rel="stylesheet">
+    
+    </head>
+    <body>
+    <!--Header--><!-- #BeginLibraryItem "/Library/acc_inner_header.lbi" --><header>
+      <div class="account_top_area">
+        <div class="container-fluid">
+          <p class="acc_logo"><a href="/Gamedify/admin" title="Naubatech"><img src="images/naubatech.png" alt="Gamedify"></a></p>
+          
+          <div class="acc_top_srch">
+          <p class="d-block d-md-none fs18 shownext"><i class="fas fa-search"></i></p>
+          <div class="acc_srch_form"><input type="text" placeholder="Search.."> <button type="submit"><i class="fas fa-search"></i></button></div>
+          </div>
+          
+          <div class="acc_top_rgt">
+            <ul>
+              <li class="dropdown">
+                <p class="acc_top_noti" data-toggle="dropdown"><span>9</span><a href="javascript:void();" title="Inbox"><i class="far fa-comment-dots"></i></a></p>
+                <div class="dropdown-menu" style="width:400px;">
+                <div class="p-3 bb2">
+                <p class="float-left fs16 black">Inbox</p>
+                <p class="float-right blue2 fs13 mt-1"><a href="#">Mark All as Read</a></p>
+                <p class="clearfix"></p>
                 </div>
-            </div>
-            <div class="info-box">
-                <div class="inside-info-box">
-                    <div id="inside">Chapters</div>
-                    <div id="inside2"><h4><%=totalChapter%></h4></div>
+                <div class="noti_list">
+                <p class="user_thmb"><span><a href="#"><img src="images/user-thmb1.jpg" alt=""></a></span></p>
+                <div class="noti_rgt">
+                <p class="fs13 weight600"><a href="#">Ascend by naubatech</a></p>
+                <p class="fs12">Inbox seamlessly connect</p>
+                <p class="float-left grey fs12">Mysite</p>
+                <p class="float-right fs12 grey">Nov 23</p>
+                <p class="clearfix"></p>
                 </div>
-            </div>
-            <div class="info-box">
-                <div class="inside-info-box">
-                    <div id="inside">Questions</div>
-                    <div id="inside2"><h4><%=totalQuestion%></h4></div>
+                <p class="clearfix"></p>
                 </div>
-            </div>
-            <div class="info-box">
-                <div class="inside-info-box">
-                    <div id="inside">Users</div>
-                    <div id="inside2"></div>
+                <div class="noti_list">
+                <p class="user_thmb"><span><a href="#"><img src="images/user-thmb2.jpg" alt=""></a></span></p>
+                <div class="noti_rgt">
+                <p class="fs13 weight600"><a href="#">Ascend by naubatech</a></p>
+                <p class="fs12">Inbox seamlessly connect</p>
+                <p class="float-left grey fs12">Mysite</p>
+                <p class="float-right fs12 grey">Nov 23</p>
+                <p class="clearfix"></p>
                 </div>
-            </div>
+                <p class="clearfix"></p>
+                </div>
+                </div>
+              </li>
+             
+              <li class="dropdown">
+                <p class="lang_link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i> <span class="d-none d-md-inline-block">Ajay Kumar</span></p>
+                <div class="dropdown-menu"> <a class="dropdown-item" href="#">Account Setting</a>
+                  
+                  <a class="dropdown-item" href="#">Logout</a> </div>
+              </li>
+            </ul>
+          </div>
+          <p class="clearfix"></p>
         </div>
-</div>
+      </div>
+    </header><!-- #EndLibraryItem --><p class="topfix2"></p>
+    <!--Header end-->
+    
+    <!-- MIDDLE STARTS -->
+    <div class="wrapper">
+    <!-- Sidebar  --><!-- #BeginLibraryItem "/Library/ecommerce_acc_sidebar.lbi" -->
+    <nav id="sidebar">
+    <div class="sidebar_menu">
+    <div class="p-3">
+    <div class="fs17 weight600">Gamedify</div>
+    <div class="fs13 mt-1">Role: Admin</div>
+    </div>
    
+    
+    <ul class="list-unstyled components">
+    <li class="active"><a href="/Gamedify/admin">Dashboard</a></li>
+    <li><a href="#menu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Course Management</a>
+    
+    <ul class="collapse dd-menu list-unstyled" id="menu1">
+    <li><a href="/Gamedify/admin/course/new" title="">New Course</a></li>
+    <li><a href="/Gamedify/admin/view/course" title="">View Course</a></li>
+    </ul>
+    </li>
+    <li class="active"><a href="/Gamedify/admin/view/chapter">Chapter</a></li>
+    <li class="active"><a href="/Gamedify/admin/view/question">Question</a></li>
+    
+    </nav><!-- #EndLibraryItem --><!-- Page Content  -->
+    <div id="content">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb_outer d-none d-md-block">
+    <div class="ml-3">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/Gamedify/admin">Home</a></li>
+    <li class="breadcrumb-item active">Dashbaord</li>
+    </ol>
+    </div>
+    </div> 
+    <!-- Breadcrumb End -->
+    
+    <div class="p-md-3">
+    <p class="p-1"><button type="button" id="sidebarCollapse" class="btn-sm btn-info d-block d-lg-none"><i class="fas fa-align-left"></i></button></p>
+    
+    <div class="row">
+    <div class="col-sm-6 col-md-6 col-xl-3 p-2">
+    <div class="acc_box dashb_bx">
+    <div class="dash_rel_ico">
+    <span class="fas fa-solid fa-check"  style="color:#8962e6"></span>
+    </div>
+    
+    <div class="dash_rel_txt">
+    <b><%=totalCourse%></b>
+    <span>Total Courses</span>
+    
+    </div>
+    
+    </div></div>
+    <div class="col-sm-6 col-md-6 col-xl-3 p-2">
+    <div class="acc_box dashb_bx">
+    <div class="dash_rel_ico">
+    <span class="fas fa-regular fa-book" style="color:#3fc0e6"></span>
+    </div>
+    
+    <div class="dash_rel_txt">
+    <b><%=totalChapter%></b>
+    <span>Total Topics</span>
+    
+    </div>
+    
+    </div></div>
+    
+    <div class="col-sm-6 col-md-6 col-xl-3 p-2">
+    <div class="acc_box dashb_bx">
+    <div class="dash_rel_ico">
+    <span class="fas fa-solid fa-question" style="color:#f3bd44"></span>
+    </div>
+    
+    <div class="dash_rel_txt">
+    <b><%=totalQuestion%></b>
+    <span>Total Questions</span>
+    
+    </div>
+    
+    </div></div>
+    
+    <div class="col-sm-6 col-md-6 col-xl-3 p-2">
+    <div class="acc_box dashb_bx">
+    <div class="dash_rel_ico">
+    <span class="fas fa-users" style="color:#58d886"></span>
+    </div>
+    
+    <div class="dash_rel_txt">
+    <b><%=totalUser%></b>
+    <span>Total Users</span>
+    
+    </div>
+    
+    </div></div>
+    </div>
+    
+    <div class="row">
+     <div class="col-12 col-lg-7  p-2">
+      <div class="dsh_stats_w">
+      <div class="stats_head">
+     <h2>Recently Added Courses</h2>
+     
+     <div class="stat_sub_hed">
+     <span>Total Courses: <b><%=totalCourse%></b></span>
+     </div>
+     
+     </div>
+     
+     
+     <div class="dsh_content">
+      <div class="dsh_table_ot">
+    <table width="100%" border="0" class="table">
+    <thead>
+    <tr>
+    <th width="30%">Course Name</th>
+    <!-- <th width="15%">Image</th> -->
+    <th width="20%">Total Chapters</th>
+    <th width="20%">Total Questions</th>
+    
+    </tr>
+    </thead>
+    <tbody>
+        <% for(let course of recentCourses){ %>
+    <tr>
+    <td><%=course.courseName%></td>
+    <td><div class="acc_thm"><span><%=course.countChapter%></span></div></td>
+    <td><div class="acc_thm"><span><%=course.countQuestion%></span></div></td>
+    </tr>
+    <% } %>
+    </tbody>
+    </table>
+     </div>
+     </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-5  p-2">
+    <div class="dsh_stats_w">
+    <div class="stats_head">
+    <h2>Recently Added Chapters</h2>
+    
+    <div class="stat_sub_hed">
+    <span>Total Chapters: <b><%=totalChapter%></b></span>
+    </div>
+    
+    </div>
+     
+     
+    <div class="dsh_content">
+    <div class="dsh_table_ot">
+    <table width="100%" border="0" class="table">
+    <thead>
+    <tr>
+    <th width="60%">Chapter</th>
+    <!-- <th width="40%">Curent Status</th> -->
+    </tr>
+    </thead>
+    
+    <tbody>
+    <% for(let chapter of recentChapter){ %>
+    <tr>
+    <td><%=chapter.chapterName%></td>
+    
+    <!-- <td><span title="Deactive" class="fa fa-circle dact_status"></span></td> -->
+    
+    </tr>
+    <% } %>
+    </tbody>
+    </table>
+    </div> 
+     </div>
+      </div>
+    </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12 col-lg-5  p-2">
+            <div class="dsh_stats_w">
+            <div class="stats_head">
+            <h2>Recently Added Question</h2>
+            
+            <div class="stat_sub_hed">
+            <span>Total Questions: <b><%=totalQuestion%></b></span>
+            </div>
+            
+            </div>
+             
+             
+            <div class="dsh_content">
+            <div class="dsh_table_ot">
+            <table width="100%" border="0" class="table">
+            <thead>
+            <tr>
+            <th width="60%">Question</th>
+            <!-- <th width="40%">Curent Status</th> -->
+            </tr>
+            </thead>
+            
+            <tbody>
+            <% for(let question of recentQuestion){ %>
+            <tr>
+            <td><%=question.question%></td>
+            
+            <!-- <td><span title="Deactive" class="fa fa-circle dact_status"></span></td> -->
+            
+            </tr>
+            <% } %>
+            </tbody>
+            </table>
+            </div> 
+             </div>
+              </div>
+            </div>
+  </div>
+    
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {	
+var data = google.visualization.arrayToDataTable([
+['Task', 'Orders'],
+['Pending', 8],
+['Ready To Dispatch', 2],
+['Dispatched', 4],
+['Delivered', 2],
+['Closed', 8],
+['Canceled', 8],
+['Rejected', 8],
+['Deleted', 8]
+]);
+
+// Optional; add a title and set the width and height of the chart
+var options = {'title':'', 'width':450, 'height':300,pieHole: 0.4};
+
+// Display the chart inside the <div> element with id="piechart"
+var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+chart.draw(data, options);}
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript">var Page='dashboard';</script> 
+<script type="text/javascript" src="Scripts/script.int.dg.js"></script>
+
+</body>
+</html>

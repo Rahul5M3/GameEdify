@@ -46,7 +46,8 @@ body {
 
 /* start-sidebar.ejs */
 .Sidebar {
-    background-color: #00008B;
+    /* background-color: #00008B; */
+    background-color: #ACADA8;
     /* height: 100vh; */
     height: 100%;
     width: 197px;
@@ -152,6 +153,7 @@ body {
     top: 590px;
     left: 10px;
     border-radius: 20px;
+    display: none;
 }
 
 /* #sidebarpart-3 button {
@@ -178,6 +180,7 @@ body {
     position: absolute;
     top: 10px;
     left: 15px;
+    /* text-align: center; */
 }
 
 #sidebar3 a {
@@ -187,6 +190,7 @@ body {
     left: 45px;
     font-size: larger;
     font-weight: bold;
+    color:#262626;
 }
 
 #sidebarpart-3 a:hover {
@@ -214,7 +218,8 @@ body {
 }
 
 .course-box {
-    background-color: white;
+    /* background-color: white; */
+    background-color: #E8E9EB;
     border-radius: 20px;
     height: 260px;
     width: 200px;
@@ -224,20 +229,34 @@ body {
     flex-direction: column;
     /* box-shadow: #F545AF 0px 0px 0px 3px; */
     border: 1px solid black;
-    transform: scale(0.8);
+    transform: scale(1);
     box-shadow: rgba(84, 241, 60, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(79, 4, 4, 0.05) 0px 0px 0px 1px inset;
 }
 
 .course-box #a{
     /* background-color: brown; */
-    height: 40%;
+    height: 60%;
     padding: 0.5rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     /* box-shadow: #000000 0px 0px 0px 3px; */
+}
+
+.course-box #a .insidea {
+    /* flex:1; */
+    height: 100%;
+    width: 100%;
+    background-color: cadetblue;
+    color: white;
+    font-size: larger;
+    padding: 0.2rem;
+    text-align: center;
 }
 
 .course-box #b {
     /* background-color: burlywood; */
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
     height: 60%;
     padding: 0.5rem;
     overflow-y: scroll;
@@ -257,12 +276,28 @@ body {
 }
 
 .course-box:hover {
-    transform: scale(1);
+    transform: scale(1.2);
+    z-index: 6;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 /* media setting */
 @media screen and (max-width: 340px) {
+
+    body {
+        height: 100vh;
+        font-family: "Anta", sans-serif;
+        font-weight: 400;
+        font-style: normal;    
+        /* overflow: hidden;  */
+        display: flex;
+        flex-direction: column;
+        /* background-color: #E9EAEC; */
+    }
+    
+    .big-container {
+        flex: 1;
+    } 
 
     /* start-navbar.ejs */
     .btn4 {
@@ -276,15 +311,38 @@ body {
         position: relative;
         right: 30px;
     }
+    .start-navbar {
+        border-bottom: 1px solid black;
+        position: fixed;
+        top: 0;
+        height: 56px;
+        width: 320px;
+        /* z-index: ; */
+    }
+    
+    .navbarNav-start {
+        justify-content: right;
+    }
 
     /* start-sidebar.ejs */
-    .Sidebar {
+    /* .Sidebar {
         background-color: rgb(218, 216, 216);
-        /* height: 100vh; */
+        background-color: #F2B5D4;
+        height: 100vh;
         height: 686px;
         width: 127px;
-        position: relative;
+        position: sticky;
+        top: 0;
         top: 70px;
+        flex: 1;
+    } */
+    .Sidebar {
+        /* background-color: rgb(218, 216, 216); */
+        background-color: #F2B5D4;
+        position: sticky;
+        top: 58px;
+        height: 100px;
+        width: 494px;
     }
 
     #sidebarpart-1 {
@@ -292,7 +350,7 @@ body {
         color: white;
         background-color: black;
         height: 60px;
-        width: 84%;
+        width: 60px;
         position: absolute;
         top: 16px;
         left: 10px;
@@ -315,18 +373,18 @@ body {
 
     #sidebarpart-2 {
         background-color: white;
-        height: 390px;
-        width: 90%;
+        height: 110px;
+        width: 320px;
         position: absolute;
-        top: 110px;
-        left: 8px;
+        top: 100px;
+        left: 6px;
         border-radius: 20px;
     }
 
     #sidebarpart-2 #a {
         position: absolute;
-        height: 94%;
-        width: 80%;
+        height: 50px;
+        width: 300px;
         /* background-color: black; */
         top: 10px;
         left: 14px;
@@ -334,10 +392,24 @@ body {
         flex-direction: column;
     }
 
+    #sidebarpart-31 {
+        background-color: white;
+        height: 60px;
+        width: 100px;
+        position: absolute;
+        top:20px;
+        left: 210px;
+        border-radius: 20px;
+    }
+    
+    #sidebarpart-31 a:hover {
+        color: red;
+    }
+
     #a div {
         /* background-color: blue; */
         height: 40px;
-        width: 100%;
+        width: 290px;
         margin-bottom: 0.5rem;
         text-align: center;
         border-radius: 14px;
@@ -365,10 +437,10 @@ body {
     #sidebarpart-3 {
         background-color: white;
         height: 60px;
-        width: 90%;
+        width: 100px;
         position: absolute;
-        top: 620px;
-        left: 8px;
+        top: 20px;
+        left: 360px;
         border-radius: 20px;
     }
 
@@ -378,8 +450,8 @@ body {
         height: 40px;
         width: 80%;
         position: absolute;
-        top: 10px;
-        left: 15px;
+        top: 8px;
+        left: 4px;
     }
 
     #sidebar3 a {
@@ -398,17 +470,17 @@ body {
     /* explore.ejs */
     .explore-1{
         /* background-color: black; */
-        height: 754px;
-        width: 89%;
-        position: absolute;
-        top: 75px;
-        left: 132px;
+        height: 794px;
+        width: 320px;
+        position: relative;
+        top: 275px;
+        left: 2px;
         overflow-y: scroll;
         display: flex;
         flex-wrap: wrap;
         /* justify-content: space-between; */
-        padding: 3rem;
-        padding-bottom: 0;
+        padding: 1rem;
+        /* padding-bottom: 0.5rem; */
     }
 
     .course-box {
@@ -416,8 +488,8 @@ body {
         border-radius: 20px;
         height: 260px;
         width: 210px;
-        margin-right: 0.7rem;
-        margin-bottom: 2rem;
+        margin-right: 0.5rem;
+        margin-bottom: 1rem;
         display: flex;
         flex-direction: column;
         /* box-shadow: #F545AF 0px 0px 0px 3px; */
@@ -453,8 +525,36 @@ body {
         background-color: black;
     }
 
+    
     .course-box:hover {
+        transform: scale(1);
+        /* z-index: 2; */
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    .flash2 {
+        /* height: 20px; */
+        position: absolute;
+        top: 2px;
+        left: 190px;
+        height: 48px;
+        width: 130px;
+        z-index: 3;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        font-size: large;
+        font-weight: bold;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        padding-left: 0.5rem;
+    }
+
+    .flash-btn{
+        position: relative;
+        left: 80px;
+        /* top: 10px; */
     }
 
     

@@ -20,7 +20,7 @@ router.get('/login',((req,res)=>{
     res.render("home/login.ejs");
 }))
 
-router.get('/user',((req,res)=>{
+router.get('/user',isLoggedin,((req,res)=>{
     res.render('home/userInfo.ejs');
 }))
 
@@ -62,6 +62,11 @@ router.get('/logout',(req,res)=>{
             res.redirect('/Gamedify/login');
         }
     })
+})
+
+router.get('/userInfo',isLoggedin,async (req,res)=>{
+    let user=await User.findById(req.user._id).populate('correctQues').populate('incorrectQues');
+    res.render("home/infoUser.ejs",{user});
 })
 
 module.exports=router;

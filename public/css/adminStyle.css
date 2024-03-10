@@ -5,17 +5,36 @@ body {
     font-weight: 400;
     font-style: normal;
     overflow: hidden;
+    display: flex;
+}
+
+.container {
+    flex: 1;
 }
 
 /* adminNavbar.ejs */
 .navbar {
-    background-color: white ;
+    background-color: #CCCDC6 ;
     border-bottom: 2px solid black;
     height: 60px;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1;
+}
+
+.navbar div {
+    color: black;
+    animation:8s linear 0s infinite alternate bounce;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(-26vw);
+  }
+  to {
+    transform: translateX(50vw);
+  }
 }
 
 /* adminSidebar.ejs */
@@ -176,8 +195,8 @@ body {
 .course-page {
     position: absolute;
     top: 140px;
-    left: 230px;
-    width: 80%;
+    left: 300px;
+    width: 70%;
     height: 483px;
     /* background-color: #436850; */
     overflow: hidden;
@@ -261,3 +280,8 @@ body {
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 } 
 
+.q {
+    position: relative;
+    top: 40px;
+    left: 80px;
+}

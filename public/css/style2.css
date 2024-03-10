@@ -200,13 +200,14 @@ body {
 /* explore.ejs */
 .explore-1{
     /* background-color: black; */
-    height: 589px;
+    height: 616px;
     width: 82%;
     position: absolute;
-    top: 75px;
+    top: 114px;
     left: 210px;
-    overflow-y: scroll;
+    overflow-x: scroll;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     /* justify-content: space-between; */
     padding: 2rem 7rem 0 6rem;
@@ -296,6 +297,13 @@ body {
         /* background-color: #E9EAEC; */
     }
 
+    .logoutBtn {
+        position: relative;
+        left: 50px;
+        bottom: 10px;
+        border-radius: 10px;
+    }
+
     .logoutBTN {
         display: none;
     }
@@ -343,11 +351,11 @@ body {
     } */
     .Sidebar {
         /* background-color: rgb(218, 216, 216); */
-        background-color: #F2B5D4;
+        /* background-color: #F2B5D4; */
         position: sticky;
         top: 58px;
         height: 100px;
-        width: 494px;
+        width: 320px;
     }
 
     #sidebarpart-1 {
@@ -475,13 +483,15 @@ body {
     /* explore.ejs */
     .explore-1{
         /* background-color: black; */
-        height: 794px;
+        height: 304px;
         width: 320px;
         position: relative;
-        top: 275px;
+        top: 245px;
         left: 2px;
-        overflow-y: scroll;
+        overflow: scroll;
         display: flex;
+        /* flex-direction: column; */
+        /* flex-direction: row; */
         flex-wrap: wrap;
         /* justify-content: space-between; */
         padding: 1rem;
@@ -491,8 +501,8 @@ body {
     .course-box {
         background-color: white;
         border-radius: 20px;
-        height: 260px;
-        width: 210px;
+        height: 220px;
+        width: 180px;
         margin-right: 0.5rem;
         margin-bottom: 1rem;
         display: flex;
@@ -542,9 +552,9 @@ body {
         /* height: 20px; */
         position: absolute;
         top: 2px;
-        left: 190px;
+        left: 100px;
         height: 48px;
-        width: 130px;
+        width: 220px;
         z-index: 3;
         padding: 0;
         margin: 0;

@@ -28,7 +28,7 @@
     <div class="infoUser">
         <div class="inside-infoUser">
             <div class="disp1" id="section3">
-                <h2><b>Correct Question</b></h2>
+                <h2 style="color: #00FFFF;"><b>Correct Question</b></h2>
                 <% if(user.correctQues.length<=0) { %>
                     <div class="cccccc">No Question done till yet or not correct till yet</div>
                     <%  } %>
@@ -72,7 +72,7 @@
               </div>
             </div>
             <div class="disp2" id="section4">
-                <h2><b>IncorrectQuestion</b></h2>
+                <h2 style="color: #00FFFF;"><b>IncorrectQuestion</b></h2>
                 <% if(user.incorrectQues.length<=0) { %>
                     <div class="cccccc">No incorrect question</div>
                     <%  } %>
@@ -126,7 +126,7 @@
                             <div class="  p-2">
                                 <div class="dsh_stats_w">
                                 <div class="stats_head">
-                                <h2>Correct Question</h2>
+                                <h2 style="color: #00FFFF;">Correct Question</h2>
                                 
                                 <div class="stat_sub_hed">
                                 <span>Total Questions: <b><%=user.correctQues.length%></b></span>
@@ -169,7 +169,7 @@
                             <div class="  p-2">
                                 <div class="dsh_stats_w">
                                 <div class="stats_head">
-                                <h2>Incorrect Question</h2>
+                                <h2 style="color:#00FFFF">Incorrect Question</h2>
                                 
                                 <div class="stat_sub_hed">
                                 <span>Total Questions: <b><%=user.incorrectQues.length%></b></span>
@@ -218,7 +218,7 @@
                     <div class="SSS">
                     <div class="acc_box dashb_bx">
                     <div class="dash_rel_ico">
-                    <span class="fas fa-regular fa-book" style="color:#3fc0e6"></span>
+                    <span class="fas fa-regular fa-book" style="color:#00FFFF"></span>
                     </div>
                     
                     <div class="dash_rel_txt">
@@ -258,6 +258,47 @@
                             </div></div>
 
                 </div>
+                <div id="section5" class="doubtq">
+                    <h2 style="color: #00FFFF;"><b>Doubt Question</b></h2>
+                    <div class="row">
+                        <% for(let dq of user.doubtQues){ %>
+                        <div class="  p-2">
+                            <div class="dsh_stats_w">
+                            <div class="stats_head">
+                            <h2>Incorrect Question</h2>
+                            
+                            <div class="stat_sub_hed">
+                            <span>Total Questions: <b><%=user.doubtQues.length%></b></span>
+                            </div>
+                            
+                            </div>
+                             
+                             
+                            <div class="dsh_content">
+                            <div class="dsh_table_ot">
+                            <table width="100%" border="0" class="table">
+                            <thead>
+                            <tr>
+                            <!-- <th width="60%">Question</th> -->
+                            </tr>
+                            </thead>
+                            
+                            <tbody>
+                           
+                            <tr>
+                            <td><%=dq.doubtQues%></td>
+                            
+                            </tr>
+                            
+                            </tbody>
+                            </table>
+                            </div> 
+                             </div>
+                              </div>
+                            </div>
+                        <% } %>    
+                  </div>
+                </div>
             </div>
             <div class="Bb">
                 <div class="ibb">
@@ -266,6 +307,7 @@
                     <a href="#section2" onclick="visiteThis('section2')"><div class=" bbbb" >Info</div></a>
                     <a href="#section3" onclick="visiteThis('section3')"><div class="correct bbbb" >Correct Question</div></a>
                     <a href="#section4" onclick="visiteThis('section4')"><div class="incorrect bbbb" >Incorrect Question</div></a>
+                    <a href="#section5" onclick="visiteThis('section5')"><div class="incorrect bbbb" >Doubt Question</div></a>
                     <a href="/Gamedify/logout"><div class=" bbbb" >Logout</div></a>
                 </div>
             </div>

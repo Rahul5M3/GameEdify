@@ -85,7 +85,7 @@ router.get('/logout',(req,res)=>{
 })
 
 router.get('/userInfo',isLoggedin,async (req,res)=>{
-    let user=await User.findById(req.user._id).populate('correctQues').populate('incorrectQues');
+    let user=await User.findById(req.user._id).populate('correctQues').populate('incorrectQues').populate('doubtQues');
     res.render("home/infoUser.ejs",{user});
 })
 

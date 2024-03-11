@@ -249,11 +249,13 @@ body {
         /* background-color:#CCCDC6; */
         /* overflow: hidden; */
         padding: 0;
+        background-color: #01257D;
     }
     
     .infoUser {
         /* flex: 1; */
         display: block;
+        /* background-color: #00FFFF; */
     }
 
     .ia {
@@ -312,11 +314,12 @@ body {
         /* position: absolute;
         top: 500px; */
         width: 316px;
-        height: 3500px;
+        height: 4900px;
         position: absolute;
        /* top: 150px; */
-       top: 10px;
-       left: 1px;
+       top: 2px;
+       left: 2px;
+       background-color: #01257D;
         /* right: 20px;
         bottom: ; */
     }
@@ -326,7 +329,7 @@ body {
         width: 300px;
         position: relative;
         left: 1px;
-        padding-top: 50px;
+        padding-top: 20px;
         /* display: block; */
     }
 
@@ -400,6 +403,7 @@ body {
 
     .disp2 {
         width: 300px;
+        height: 100vh;
         position: relative;
         top: 2000px;
         left: 8px;
@@ -418,6 +422,14 @@ body {
     .SSS {
         width: 300px;
         margin-bottom: 0.5rem;
+    }
+
+    .doubtq {
+        position: relative;
+        height: 100vh;
+        top: 2400px;
+        left: 8px;
+        width: 300px;
     }
 
     .footer {

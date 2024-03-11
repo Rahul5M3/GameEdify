@@ -214,7 +214,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     /* justify-content: space-between; */
-    padding: 6rem 7rem 0 6rem;
+    padding: 2rem 5rem 0 4rem;
 }
 
 .explore-1 a {
@@ -309,15 +309,161 @@ body {
     padding-right: 0.5rem;
 }
 
+#d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#d:hover {
+    background-color: black;
+    color: white;
+}
+
+.doubtQues {
+    position: absolute;
+    top: 480px;
+    left: 380px;
+    background-color: black;
+    height: 200px;
+    width: 900px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#icon1 {
+    position: absolute;
+    left: 850px;
+    top: 85px;
+    font-size: x-large;
+    transform: scale(1.6);
+    color: aliceblue;
+    transition: all 1s ease;
+}
+
+#icon1:hover {
+    /* transform: scale(1.4); */
+    transform: rotate(0.5turn);
+}
+
+.doubtQues:hover #icon1 {
+    color: black;
+}
+
+.doubtQues:hover {
+    background-color: #FF5F1F;
+}
+
+.doubtQuestion {
+    width: 600px;
+    height: 200px;
+    border-radius: 30px;
+    padding: 1rem;
+}
+
+
+
+.doubtbtn {
+    position: absolute;
+    left: 660px;
+    top: 40px;
+    border-radius: 10px;
+    height: 120px;
+    width: 120px;
+    font-size: larger;
+    font-weight: bold;
+    transition: all 1s ease-in;
+}
+
+.doubtbtn:active {
+    background-color: black;
+    color: white;
+    transform: scale(0.8);
+}
+
+
+
 /* media setting */
 @media screen and (max-width: 340px) {
+
+    .doubtQues {
+        display: none;
+        /* display: block; */
+        position: absolute;
+        width: 300px;
+        height: 380px;
+        top: 264px;
+        left: 12px;
+        /* left: 0; */
+        z-index: 1;
+        transition: all 1s ease;
+    }
+
+    .doubtQues:hover {
+        background-color: #FF5F1F;
+    }
+
+    .doubtQuestion {
+        width: 300px;
+        height: 286px;
+        border-radius: 30px;
+        padding: 1rem;
+    }
+
+    .doubtbtn {
+        position: absolute;
+        left: 86px;
+        top: 300px;
+        border-radius: 10px;
+        height: 60px;
+        width: 120px;
+        font-size: larger;
+        font-weight: bold;
+        transition: all 1s ease-in;
+    }
+
+    .doubtbtn:hover {
+        background-color: black;
+        color: white;
+        transform: scale(0.8);
+    }
+
+    #icon1 {
+        position: absolute;
+        left: 136px;
+        opacity: 0.6;
+        top: 135px;
+        font-size: x-large;
+        transform: scale(1.6);
+        color: aliceblue;
+        transition: all 1s ease;
+        z-index: 3;
+        /* display: none; */
+        color: black;
+    }
+    
+
+    /* .doubtbtn {
+        display: none;
+    }
+
+    .doubtQuestion {
+        display: none;
+    } */
 
     .searchoption {
         /* display: none; */
         position: absolute;
         left: 18px;
-        top: 290px;
+        top: 312px;
         z-index: 1;
+        /* margin-bottom: 1rem; */
     }
 
     body {
@@ -332,10 +478,15 @@ body {
     }
 
     .logoutBtn {
+        display: block;
         position: relative;
         left: 50px;
         bottom: 10px;
         border-radius: 10px;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     .logoutBTN {

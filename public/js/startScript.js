@@ -91,3 +91,18 @@ function visiteThis(sectionId){
         section.scrollIntoView({behavior:'smooth'});
     }
 }
+
+
+document.querySelector('#d').addEventListener('click',(event)=>{
+    event.preventDefault();
+    console.log('clicked');
+    let doubt=document.querySelector('.doubtQues');
+    doubt.style.display='block';
+})
+
+document.querySelector('#icon1').addEventListener('click',(event)=>{
+    event.preventDefault();
+    // console.log('clicked');
+    let doubt=document.querySelector('.doubtQues');
+    doubt.style.display='none';
+})

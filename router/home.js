@@ -3,6 +3,7 @@ const router=express.Router({mergeParams:true});
 const Course=require('../models/course.js');
 const Chapter=require('../models/chapter.js');
 const Question=require('../models/question.js');
+const DoubtQ=require('../models/doubtQ.js');
 const wrapAsync=require("../utils/wrapAsync.js");
 const User = require('../models/user.js');
 const passport = require("passport");
@@ -29,6 +30,18 @@ router.get('/search', async(req,res)=>{
     let courses=await Course.find({courseName:s});
     // res.send(courses);
     res.render('home/explore.ejs',{courses});
+})
+
+router.post('/doubtQues',async (req,res)=>{
+    let {doubtques}=req.body;
+    let newDoubt=new DoubtQ({doubtQues:doubtques,user:req.user._id});
+    let d=await newDoubt.save();
+    console.log(d);
+    res.redirect("/Gamedify/explore");
+})
+
+router.get('/doubtQues',(req,res)=>{
+    res.send('see all');
 })
 
 router.get('/explore',isLoggedin, wrapAsync(async (req,res)=>{

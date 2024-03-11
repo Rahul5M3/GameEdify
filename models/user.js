@@ -21,7 +21,11 @@ const userSchema=new mongoose.Schema({
     points:{
         type:Number,
         default:0,
-    }
+    },
+    doubtQues: [{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"DoubtQ"
+    }],
 });
 
 userSchema.plugin(passportLocalMongoose);

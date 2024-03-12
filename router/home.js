@@ -40,8 +40,9 @@ router.post('/doubtQues',async (req,res)=>{
     res.redirect("/Gamedify/explore");
 })
 
-router.get('/doubtQues',(req,res)=>{
-    res.send('see all');
+router.get('/doubtQues',async(req,res)=>{
+    let Doubtq=await DoubtQ.find({});
+    res.render("home/doubt.ejs",{Doubtq});
 })
 
 router.get('/explore',isLoggedin, wrapAsync(async (req,res)=>{

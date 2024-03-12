@@ -393,16 +393,17 @@ body {
 @media screen and (max-width: 340px) {
 
     .doubtQues {
-        display: none;
-        /* display: block; */
+        /* display: none; */
+        display: block;
         position: absolute;
         width: 300px;
         height: 380px;
-        top: 264px;
-        left: 12px;
-        /* left: 0; */
+        top: 264px; 
+        /* left: 12px; */
+        left: -300px;
         z-index: 1;
-        transition: all 1s ease;
+        /* transition: opacity 1s ease; */
+        transition: all 0.5s ease-in-out;
     }
 
     .doubtQues:hover {
@@ -571,7 +572,7 @@ body {
 
     #sidebarpart-2 {
         background-color: white;
-        height: 110px;
+        height: 100px;
         width: 320px;
         position: absolute;
         top: 100px;
@@ -581,7 +582,7 @@ body {
 
     #sidebarpart-2 #a {
         position: absolute;
-        height: 50px;
+        height: 40px;
         width: 300px;
         /* background-color: black; */
         top: 10px;
@@ -668,8 +669,8 @@ body {
     /* explore.ejs */
     .explore-1{
         /* background-color: black; */
-        height: 304px;
-        width: 320px;
+        height: 300px;
+        width: 316px;
         position: relative;
         top: 245px;
         left: 2px;
@@ -680,6 +681,7 @@ body {
         flex-wrap: wrap;
         /* justify-content: space-between; */
         padding: 1rem;
+        padding-top: 2rem;
         /* padding-bottom: 0.5rem; */
     }
 
@@ -687,7 +689,7 @@ body {
         background-color: white;
         border-radius: 20px;
         height: 220px;
-        width: 180px;
+        width: 160px;
         margin-right: 0.5rem;
         margin-bottom: 1rem;
         display: flex;
@@ -707,7 +709,7 @@ body {
     .course-box #b {
         /* background-color: burlywood; */
         border-top: 1px solid black;
-        height: 60%;
+        height: 100px;
         padding: 0.5rem;
         overflow-y: scroll;
         color: black;
@@ -744,12 +746,14 @@ body {
         padding: 0;
         margin: 0;
         text-align: left;
-        font-size: large;
+        font-size: small;
         font-weight: bold;
         display: flex;
         /* justify-content: center; */
-        align-items: center;
-        padding-left: 0.5rem;
+        /* align-items: center; */
+        /* padding-left: 0.5rem; */
+        padding: 0.5rem;
+        overflow-x: scroll;
     }
 
     .flash-btn{
@@ -757,6 +761,73 @@ body {
         left: 80px;
         /* top: 10px; */
     }
+
+    .doubtShowing {
+        height: 100vh;
+        width: 320px;
+        background-color: #393939;
+    }
+
+    .doubtHeading {
+        position: fixed;
+        height: 100px;
+        width: 320px;
+        background-color: darkcyan;
+        padding: 0.5rem;
+        text-align: center;
+        font-size: xx-large;
+        padding-top: 1.5rem;
+        color: white;
+    }
+
+    .showDoubt {
+        height: 600px;
+        width: 310px;
+        background-color: aliceblue;
+        position: relative;
+        top: 110px;
+        left: 5px;
+        padding: 0.3rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .presentDoubt {
+        /* background-color: brown; */
+        height: 100px;
+        width: 300px;
+        margin-top: 10px;
+        /* border-radius: 10px; */
+        display: flex;
+        flex-direction: column;
+        color: white;
+    }
+
+    .presentDoubt .dq {
+        flex: 1;
+        background-color: #393939;
+        padding: 0.5rem;
+        display: flex;
+    }
+
+    .presentDoubt .d {
+        flex: 1;
+        background-color: #393939;
+        padding: 0.2rem;
+        padding-left: 0.5rem;
+    }
+
+    .dq .qq {
+        flex: 1;
+    }
+
+    .dq .aq {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     
 }
 

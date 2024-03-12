@@ -27,8 +27,11 @@ router.get('/course/new',wrapAsync((req,res)=>{
 }))
 
 router.post("/course/new",validateCourse,wrapAsync(async (req,res)=>{
-    let newCourse=new Course(req.body);
-    console.log(newCourse);
+    let {courseName,aboutCourse}=req.body;
+    courseName=courseName.toLowerCase();
+    aboutCourse=aboutCourse.toLowerCase();
+    let newCourse=new Course({courseName:courseName,aboutCourse:aboutCourse});
+    // console.log(newCourse);
     await newCourse.save();
     res.redirect("/Gamedify/admin/view/course");
 }))

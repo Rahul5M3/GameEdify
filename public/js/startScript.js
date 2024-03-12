@@ -97,12 +97,12 @@ document.querySelector('#d').addEventListener('click',(event)=>{
     event.preventDefault();
     console.log('clicked');
     let doubt=document.querySelector('.doubtQues');
-    doubt.style.display='block';
+    // doubt.style.display='block';
+    doubt.style.left="16px";
 })
 
 document.querySelector('#icon1').addEventListener('click',(event)=>{
     event.preventDefault();
-    // console.log('clicked');
     let doubt=document.querySelector('.doubtQues');
-    doubt.style.display='none';
+    doubt.style.left='-300px';
 })

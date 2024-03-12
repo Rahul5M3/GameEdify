@@ -11,6 +11,16 @@ const doubtSchema=new Schema({
         ref:"User"
     },
     doubtans:String,
+    userSolved:[
+        {
+            type:Schema.Types.ObjectId,
+            ref:"User"
+        }
+    ],
+    date:{
+        type:Date,
+        default:new Date(Date.now()),
+    }
 });
 
 module.exports=mongoose.model('DoubtQ',doubtSchema);

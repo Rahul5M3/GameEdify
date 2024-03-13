@@ -329,17 +329,21 @@ body {
 
     .stickyfooter{
         display: block;
-        height: 60px;
-        width: 320px;
-        position: sticky;
-        bottom: 2pxpx;
+        height: 490px;
+        width: 60px;
+        position: absolute;
+        right: 2px;
+        top: 124px;
         background-color: black;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 1;
+        /* color: cadetblue; */
     }
     
     .start-navbar {
@@ -347,7 +351,7 @@ body {
         position: fixed;
         top: 0;
         height: 64px;
-        width: 320px;
+        width: 422px;
         /* margin-bottom: 2rem; */
         /* padding-bottom: ; */
         z-index: 2;
@@ -357,7 +361,7 @@ body {
     .content1 {
         background-color: black;
         height: 270px;
-        width: 320px;
+        width: 422px;
         position: relative;
         top: 50px;
     }
@@ -397,6 +401,7 @@ body {
         top: 32px;
         padding-left: 2rem;
         padding-right: 2rem;
+        width: 352px;
     }
     
     .content2-inside {
@@ -437,7 +442,7 @@ body {
         height: 300px;
         position: relative;
         top: 100px;
-        left: 30px;
+        left: 10px;
         width: 80%;
         margin-bottom: 4rem;
         display: flex;

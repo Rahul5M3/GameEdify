@@ -262,11 +262,12 @@ body {
 .course-box #b {
     /* background-color: burlywood; */
     /* border-top: 1px solid black; */
-    height: 60%;
-    padding: 0.7rem;
-    overflow-y: scroll;
+    /* height: 60%; */
+    /* padding: 0.7rem; */
+    /* overflow-y: scroll; */
     /* box-shadow: #F545AF 0px 0px 0px 3px; */
-    color: white;
+    /* color: white; */
+    display: none;
 }
 
 .course-box #b::-webkit-scrollbar{
@@ -298,11 +299,13 @@ body {
 .searchoption input {
     border-radius: 20px;
     padding-left: 0.5rem;
+    position: relative;
+    left: 36px;
 }
 
 .searchbtn {
     position: absolute;
-    left: 220px;
+    left: 260px;
     top: 0px;
     border-radius: 20px;
     padding-left: 0.5rem;
@@ -474,6 +477,7 @@ body {
         display: flex;
         flex-direction: column;
         /* background-color: #E9EAEC; */
+        background-color: white;
     }
 
     .logoutBtn {
@@ -494,6 +498,8 @@ body {
     
     .big-container {
         flex: 1;
+        width: 320px;
+        /* left: 46px; */
     } 
 
     /* start-navbar.ejs */
@@ -512,6 +518,7 @@ body {
         border-bottom: 1px solid black;
         position: fixed;
         top: 0;
+        left: 46px;
         height: 56px;
         width: 320px;
         /* z-index: ; */
@@ -538,6 +545,7 @@ body {
         /* background-color: #F2B5D4; */
         position: sticky;
         top: 58px;
+        left: 46px;
         height: 100px;
         width: 320px;
     }
@@ -574,7 +582,7 @@ body {
         width: 320px;
         position: absolute;
         top: 100px;
-        left: 6px;
+        left: 2px;
         border-radius: 20px;
     }
 
@@ -671,7 +679,7 @@ body {
         width: 316px;
         position: relative;
         top: 245px;
-        left: 2px;
+        left: 46px;
         overflow: scroll;
         display: flex;
         /* flex-direction: column; */

@@ -1,0 +1,13 @@
+<% layout('/layouts/boilerplate2.ejs') %>
+
+<div class="doubtAns">
+    <div>
+        <div class="quesddd"><%=q.doubtQues%></div>
+        <div class="textarea">
+            <form action="/Gamedify/doubtans/<%=q._id%>" method="post">
+                <textarea  name="doubtans" id="" cols="30" rows="10" placeholder="answer here..."></textarea>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

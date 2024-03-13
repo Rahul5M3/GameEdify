@@ -70,7 +70,10 @@ router.get('/:id/chapter/new',wrapAsync((req,res)=>{
 
 router.get("/view/chapter",wrapAsync(async(req,res)=>{
     let chapters=await Chapter.find({}).populate('course');
-    res.render("admin/view-chapter.ejs",{chapters});
+    if(chapters){
+        res.render('admin/view-chapter.ejs',{chapters});
+    }
+    // res.render("admin/view-chapter.ejs",{chapters});
 }))
 
 router.get("/:id/view/chapter",wrapAsync( async (req,res)=>{

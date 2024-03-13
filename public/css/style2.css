@@ -387,8 +387,6 @@ body {
     transform: scale(0.8);
 }
 
-
-
 /* media setting */
 @media screen and (max-width: 340px) {
 
@@ -677,19 +675,20 @@ body {
         overflow: scroll;
         display: flex;
         /* flex-direction: column; */
-        /* flex-direction: row; */
-        flex-wrap: wrap;
-        /* justify-content: space-between; */
-        padding: 1rem;
-        padding-top: 2rem;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        padding-top: 2.4rem;
         /* padding-bottom: 0.5rem; */
     }
 
     .course-box {
         background-color: white;
         border-radius: 20px;
-        height: 220px;
-        width: 160px;
+        height: 100px;
+        width: 190px;
         margin-right: 0.5rem;
         margin-bottom: 1rem;
         display: flex;
@@ -701,22 +700,34 @@ body {
 
     .course-box #a{
         /* background-color: brown; */
-        height: 40%;
+        height: 100px;
         padding: 0.5rem;
+        flex: 1;
         /* box-shadow: #000000 0px 0px 0px 3px; */
     }
 
-    .course-box #b {
+    /* .course-box #b { */
         /* background-color: burlywood; */
-        border-top: 1px solid black;
-        height: 100px;
-        padding: 0.5rem;
-        overflow-y: scroll;
-        color: black;
+        /* border-top: 1px solid black; */
+            /* height: 0px;
+            padding: 0.5rem;
+            overflow-y: scroll;
+            color: black; */
         /* box-shadow: #F545AF 0px 0px 0px 3px; */
+    /* } */
+
+    .course-box #a .insidea {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .course-box #b::-webkit-scrollbar{
+    .course-box #a .insidea:active {
+        color: black;
+    }
+
+    /* .course-box #b::-webkit-scrollbar{
         width: 8px;
     }
 
@@ -726,7 +737,7 @@ body {
 
     .course-box:hover #b::-webkit-scrollbar-thumb{
         background-color: black;
-    }
+    } */
 
     
     .course-box:hover {
@@ -801,6 +812,7 @@ body {
         display: flex;
         flex-direction: column;
         color: white;
+        margin-bottom: 1rem;
     }
 
     .presentDoubt .dq {

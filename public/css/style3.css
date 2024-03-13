@@ -249,6 +249,38 @@ body {
     bottom: 4px;
 }
 
+.stickyfooter {
+    display: none;
+}
+
+.doubtAns {
+    background-color: #393939;
+    height: 580px;
+    width: 330px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    left: 4px;
+}
+
+.textarea {
+    position: relative;
+    top: 120px;
+    left: 6px;
+}
+
+.quesddd{
+    background-color: white;
+    position: relative;
+    top: 90px;
+    left: 10px;
+    height: 150px;
+    width: 18rem;
+    border-radius: 10px;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
 
 /* for media screen 326 */
 @media screen and (max-width:326px) {
@@ -265,7 +297,50 @@ body {
     .big-container {
         flex: 1;
         /* background-color: aqua; */
-    } 
+    }
+    
+    .doubtAns {
+        background-color: #393939;
+        height: 580px;
+        width: 310px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        position: relative;
+        left: 4px;
+    }
+
+    .textarea {
+        position: relative;
+        top: 120px;
+        left: 6px;
+    }
+
+    .quesddd{
+        background-color: white;
+        position: relative;
+        top: 90px;
+        left: 10px;
+        height: 150px;
+        width: 18rem;
+        border-radius: 10px;
+        padding: 1rem;
+        overflow-y: scroll;
+    }
+
+    .stickyfooter{
+        display: block;
+        height: 60px;
+        width: 320px;
+        position: sticky;
+        bottom: 2pxpx;
+        background-color: black;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
     
     .start-navbar {
         border-bottom: 1px solid black;
@@ -305,13 +380,14 @@ body {
     .inside2-content1 {
         /* background-color: aquamarine; */
         height: 80px;
-        width: 180px;
+        width: 260px;
         position: relative;
         top: 80px;
         left: 40px;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         color: white;
+        overflow: scroll;
     }
     
     .content2 {
@@ -363,7 +439,7 @@ body {
         top: 100px;
         left: 30px;
         width: 80%;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
         display: flex;
         flex-direction: column;
     }

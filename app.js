@@ -30,6 +30,8 @@ app.listen(3000,()=>{
     console.log("server started");
 })
 
+let dbUrl=process.env.ATLASDB_URL;
+
 main()
 .then(()=>{
     console.log('db connected');
@@ -38,8 +40,9 @@ main()
     console.log(err);
 })
 
+
 async function main(){
-    await mongoose.connect("mongodb://localhost:27017/Gamedify");
+    await mongoose.connect(dbUrl);
 }
 
 

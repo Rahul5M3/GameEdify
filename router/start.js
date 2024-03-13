@@ -14,15 +14,18 @@ router.get('/:id/chapter',isLoggedin,wrapAsync(async(req,res)=>{
         req.flash('error',"No chapters there..Try another course till chapter added to it");
         return res.redirect("/Gamedify/explore");
     }
-// res.send(chapters);
     res.render("start/web-chapter.ejs",{chapters});
 }))
 
 router.get("/:id/question",isLoggedin,wrapAsync(async(req,res)=>{
     let ques=await Question.find({chapter:req.params.id}).populate({path:'chapter',populate:{path:'course'}});
     let users=await User.countDocuments({});
-    // console.log(ques);
-    res.render('start/web-question.ejs',{ques,users});
+    if(ques.length!=0){
+        res.render('start/web-question.ejs',{ques,users});
+    }else {
+        req.flash('error',"No Questions available");
+        res.redirect('/Gamedify/explore');
+    }
 }))
 
 router.get('/:quesId/solve',isLoggedin,wrapAsync(async (req,res)=>{

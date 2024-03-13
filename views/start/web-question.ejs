@@ -1,17 +1,17 @@
 <% layout('/layouts/boilerplate2.ejs') %>
 
 <div class="content1">
+    <% if(ques.length){ %>
     <div class="inside1-content1"><%=ques[0].chapter.chapterName%></div>
     <div class="inside2-content1"><%=ques[0].chapter.course.courseName%></div>
+    <% } %>
 </div>
 
 <div class="content2">
     <div class="content2-inside">
         <div class="content2-a">
             <div>
-                <% if(ques[0].chapter.course.countQuestion>0) { %>
                 <%=ques[0].chapter.course.countQuestion%>
-                <%} %>
             </div>
             <div>Questions</div>
         </div>

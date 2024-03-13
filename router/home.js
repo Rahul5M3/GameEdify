@@ -32,7 +32,7 @@ router.get('/search', async(req,res)=>{
     res.render('home/explore.ejs',{courses});
 })
 
-router.post('/doubtQues',async (req,res)=>{
+router.post('/doubtQues',isLoggedin,async (req,res)=>{
     let {doubtques}=req.body;
     let newDoubt=new DoubtQ({doubtQues:doubtques,user:req.user._id});
     let d=await newDoubt.save();
@@ -40,9 +40,23 @@ router.post('/doubtQues',async (req,res)=>{
     res.redirect("/Gamedify/explore");
 })
 
-router.get('/doubtQues',async(req,res)=>{
+router.get('/doubtQues',isLoggedin,async(req,res)=>{
     let Doubtq=await DoubtQ.find({});
     res.render("home/doubt.ejs",{Doubtq});
+})
+
+router.get('/doubtQ/:id',isLoggedin,async(req,res)=>{
+    let q=await DoubtQ.findById(req.params.id);
+    res.render("home/doubtAns.ejs",{q});
+})
+
+router.post('/doubtans/:id',isLoggedin,async (req,res)=>{
+   await DoubtQ.findByIdAndUpdate(req.params.id,{doubtans:req.body.doubtans});
+   let user=await User.findById(req.user._id);
+    user.points+=1;
+    user.userSolved=req.user._id;
+    await user.save();
+   res.redirect('/Gamedify/doubtQues');  
 })
 
 router.get('/explore',isLoggedin, wrapAsync(async (req,res)=>{

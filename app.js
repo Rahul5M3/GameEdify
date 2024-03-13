@@ -100,7 +100,7 @@ app.use((req,res,next)=>{
 })
 
 app.get('/',(req,res)=>{
-    res.redirect('/Gamedify');
+    res.redirect('/Gamedify/explore');
 })
 
 // home

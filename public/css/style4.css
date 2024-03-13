@@ -235,7 +235,7 @@ body {
 }
 
 /* for screen of size 326 -------------------------------------------------------------------------------*/
-@media screen and (max-width: 326px) {
+@media screen and (max-width: 358px) {
 
     .blockUser {
        display: none;

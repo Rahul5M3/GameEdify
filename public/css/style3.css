@@ -283,7 +283,7 @@ body {
 
 
 /* for media screen 326 */
-@media screen and (max-width:326px) {
+@media screen and (max-width:358px) {
     body {
         height: 100vh;
         font-family: "Anta", sans-serif;

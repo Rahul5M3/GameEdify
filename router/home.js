@@ -10,7 +10,7 @@ const passport = require("passport");
 const {isLoggedin}=require('../middleware.js');
 
 router.get('/',((req,res)=>{
-    res.render('home/home.ejs');
+    res.redirect('/Gamedify/explore');
 }))
 
 router.get("/signup",((req,res)=>{

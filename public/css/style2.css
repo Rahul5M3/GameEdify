@@ -300,12 +300,12 @@ body {
     border-radius: 20px;
     padding-left: 0.5rem;
     position: relative;
-    left: 36px;
+    left: 22px;
 }
 
 .searchbtn {
     position: absolute;
-    left: 260px;
+    left: 244px;
     top: 0px;
     border-radius: 20px;
     padding-left: 0.5rem;
@@ -518,7 +518,7 @@ body {
         border-bottom: 1px solid black;
         position: fixed;
         top: 0;
-        left: 46px;
+        left: 24px;
         height: 56px;
         width: 320px;
         /* z-index: ; */
@@ -545,7 +545,7 @@ body {
         /* background-color: #F2B5D4; */
         position: sticky;
         top: 58px;
-        left: 46px;
+        left: 24px;
         height: 100px;
         width: 320px;
     }
@@ -679,7 +679,7 @@ body {
         width: 316px;
         position: relative;
         top: 245px;
-        left: 46px;
+        left: 24px;
         overflow: scroll;
         display: flex;
         /* flex-direction: column; */

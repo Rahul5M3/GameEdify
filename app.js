@@ -11,6 +11,7 @@ const mongoose=require('mongoose');
 const methodOverride=require("method-override");
 const ExpressError=require('./utils/expressError.js');
 const cookieParser=require("cookie-parser");
+const MongoStore = require('connect-mongo');
 
 const Course=require('./models/course.js');
 const Question=require('./models/question.js');
@@ -49,7 +50,14 @@ async function main(){
 app.use(cookieParser())
 
 app.use(session({
-    secret:"keyboard cat",
+    store: MongoStore.create({
+        mongoUrl: dbUrl,
+        crypto: {
+            secret:process.env.SECRET,
+        },
+        touchAfter: 24*3600,
+      }),
+    secret:process.env.SECRET,
     resave:false,
     saveUninitialized:true,
     cookie:{

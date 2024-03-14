@@ -34,9 +34,12 @@ router.get('/search', async(req,res)=>{
 
 router.post('/doubtQues',isLoggedin,async (req,res)=>{
     let {doubtques}=req.body;
-    let newDoubt=new DoubtQ({doubtQues:doubtques,user:req.user._id});
+    let newDoubt=new DoubtQ({doubtQues:doubtques, user:req.user._id});
     let d=await newDoubt.save();
     console.log(d);
+    console.log(d._id);
+    await User.findByIdAndUpdate(req.user._id,{ $push: { 'doubtQues': d._id } },);
+    req.flash('success',"DoubtQ added successfully");
     res.redirect("/Gamedify/explore");
 })
 
@@ -54,7 +57,7 @@ router.post('/doubtans/:id',isLoggedin,async (req,res)=>{
    await DoubtQ.findByIdAndUpdate(req.params.id,{doubtans:req.body.doubtans});
    let user=await User.findById(req.user._id);
     user.points+=1;
-    user.userSolved=req.user._id;
+    // user.doubtQues.push(req.params.id);
     await user.save();
    res.redirect('/Gamedify/doubtQues');  
 })

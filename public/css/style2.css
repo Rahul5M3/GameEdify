@@ -478,6 +478,7 @@ body {
         flex-direction: column;
         /* background-color: #E9EAEC; */
         background-color: white;
+        overflow-y: scroll;
     }
 
     .logoutBtn {
@@ -804,11 +805,12 @@ body {
         width: 310px;
         background-color: aliceblue;
         position: relative;
-        top: 110px;
+        top: 120px;
         left: 5px;
         padding: 0.3rem;
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
     }
 
     .presentDoubt {

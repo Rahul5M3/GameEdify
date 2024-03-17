@@ -399,6 +399,76 @@ body {
     display: none;
 }
 
+.doubtShowing {
+    height: 100vh;
+    width: 100%;
+    background-color: #393939;
+}
+
+.doubtHeading {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background-color: darkcyan;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 1.5rem;
+    color: white;
+}
+
+.showDoubt {
+    height: 600px;
+    width: 90%;
+    background-color: aliceblue;
+    position: relative;
+    top: 120px;
+    left: 22px;
+    padding: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    border: 1px solid black;
+}
+
+.presentDoubt {
+    /* background-color: brown; */
+    height: 100px;
+    width: 90%px;
+    margin-top: 6px;
+    /* border-radius: 10px; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.presentDoubt .dq {
+    flex: 1;
+    background-color: #393939;
+    padding: 0.5rem;
+    display: flex;
+}
+
+.presentDoubt .d {
+    flex: 1;
+    background-color: #393939;
+    padding: 0.2rem;
+    padding-left: 0.5rem;
+}
+
+.dq .qq {
+    flex: 2;
+}
+
+.dq .aq {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* media setting */
 @media screen and (max-width: 426px) {
 

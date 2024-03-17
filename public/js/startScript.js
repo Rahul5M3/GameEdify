@@ -93,6 +93,14 @@ function visiteThis(sectionId){
 }
 
 
+document.querySelector('.doubtbox').addEventListener('click',(event)=>{
+    event.preventDefault();
+    console.log('clicked');
+    let doubt=document.querySelector('.doubtQues');
+    // doubt.style.display='block';
+    doubt.style.left="16px";
+})
+
 document.querySelector('#d').addEventListener('click',(event)=>{
     event.preventDefault();
     console.log('clicked');
@@ -105,4 +113,5 @@ document.querySelector('#icon1').addEventListener('click',(event)=>{
     event.preventDefault();
     let doubt=document.querySelector('.doubtQues');
     doubt.style.left='-300px';
+    
 })

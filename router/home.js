@@ -56,6 +56,7 @@ router.get('/doubtQ/:id',isLoggedin,async(req,res)=>{
 router.post('/doubtans/:id',isLoggedin,async (req,res)=>{
    await DoubtQ.findByIdAndUpdate(req.params.id,{doubtans:req.body.doubtans});
    let user=await User.findById(req.user._id);
+   
     user.points+=1;
     // user.doubtQues.push(req.params.id);
     await user.save();

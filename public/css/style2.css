@@ -260,14 +260,14 @@ body {
 }
 
 .course-box #b {
-    /* background-color: burlywood; */
-    /* border-top: 1px solid black; */
-    /* height: 60%; */
-    /* padding: 0.7rem; */
-    /* overflow-y: scroll; */
+    /* background-color: burlywood;  */
+    border-top: 1px solid black; 
+    height: 60%; 
+    padding: 0.7rem;
+    overflow-y: scroll;
     /* box-shadow: #F545AF 0px 0px 0px 3px; */
-    /* color: white; */
-    display: none;
+    color: white;
+    /* display: none; */
 }
 
 .course-box #b::-webkit-scrollbar{
@@ -291,7 +291,7 @@ body {
 .searchoption {
     position: absolute;
     top: 10px;
-    left: 450px;
+    left: 400px;
     width: 200px;
     width: 100px;
 }
@@ -300,12 +300,12 @@ body {
     border-radius: 20px;
     padding-left: 0.5rem;
     position: relative;
-    left: 22px;
+    left: 1px;
 }
 
 .searchbtn {
     position: absolute;
-    left: 244px;
+    left: 150px;
     top: 0px;
     border-radius: 20px;
     padding-left: 0.5rem;
@@ -318,6 +318,7 @@ body {
     align-items: center;
     font-weight: bold;
     cursor: pointer;
+    display: none;
 }
 
 #d:hover {
@@ -390,8 +391,59 @@ body {
     transform: scale(0.8);
 }
 
+.doubtbox {
+    display: none;
+}
+
+.doubtbox i {
+    display: none;
+}
+
 /* media setting */
 @media screen and (max-width: 426px) {
+
+    .doubtbox {
+        display: block;
+        height: 400px;
+        width: 40px;
+        background-color: #393939;
+        position: absolute;
+        top: 200px;
+        left: 306px;
+        z-index: 4;
+        border-radius: 40px;
+        font-size: xx-large;
+        font-weight: bolder;
+    }
+
+    .doubtbox i {
+        display: block;
+        position: absolute;
+        top: 160px;
+        left: 8px;
+        color: white;
+    }
+
+    .course-box #b {
+        display: none;
+    }
+
+    .searchoption input {
+        border-radius: 20px;
+        padding-left: 0.5rem;
+        position: relative;
+        left: 1px;
+        bottom: 30px;
+    }
+    
+    .searchbtn {
+        position: absolute;
+        left: 150px;
+        top: -30px;
+        border-radius: 20px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
 
     .doubtQues {
         /* display: none; */
@@ -450,6 +502,21 @@ body {
         color: black;
     }
     
+    #d {
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute; */
+        display: none;
+    }
+    
+    #d:hover {
+        background-color: black;
+        color: white;
+    }
+
 
     /* .doubtbtn {
         display: none;
@@ -519,10 +586,10 @@ body {
         border-bottom: 1px solid black;
         position: fixed;
         top: 0;
-        left: 24px;
+        left: 0px;
         height: 56px;
-        width: 320px;
-        /* z-index: ; */
+        width: 370px;
+        z-index: 6;
     }
     
     .navbarNav-start {
@@ -546,9 +613,10 @@ body {
         /* background-color: #F2B5D4; */
         position: sticky;
         top: 58px;
-        left: 24px;
+        left: 0px;
         height: 100px;
-        width: 320px;
+        width: 380px;
+        z-index: 4;
     }
 
     #sidebarpart-1 {
@@ -583,7 +651,7 @@ body {
         width: 320px;
         position: absolute;
         top: 100px;
-        left: 2px;
+        left: 0px;
         border-radius: 20px;
     }
 
@@ -593,7 +661,7 @@ body {
         width: 300px;
         /* background-color: black; */
         top: 10px;
-        left: 14px;
+        left: 0px;
         display: flex;
         flex-direction: column;
     }
@@ -677,10 +745,10 @@ body {
     .explore-1{
         /* background-color: black; */
         height: 300px;
-        width: 316px;
+        width: 290px;
         position: relative;
-        top: 245px;
-        left: 24px;
+        top: 225px;
+        left: 0px;
         overflow: scroll;
         display: flex;
         /* flex-direction: column; */
@@ -688,7 +756,7 @@ body {
         /* flex-wrap: wrap; */
         justify-content: center;
         align-items: center;
-        padding: 2rem;
+        padding: 1rem;
         padding-top: 2.4rem;
         /* padding-bottom: 0.5rem; */
     }
@@ -784,14 +852,14 @@ body {
 
     .doubtShowing {
         height: 100vh;
-        width: 320px;
+        width: 375px;
         background-color: #393939;
     }
 
     .doubtHeading {
         position: fixed;
         height: 100px;
-        width: 320px;
+        width: 370px;
         background-color: darkcyan;
         padding: 0.5rem;
         text-align: center;
@@ -802,22 +870,23 @@ body {
 
     .showDoubt {
         height: 600px;
-        width: 310px;
+        width: 330px;
         background-color: aliceblue;
         position: relative;
         top: 120px;
-        left: 5px;
+        left: 22px;
         padding: 0.3rem;
         display: flex;
         flex-direction: column;
         overflow-y: scroll;
+        border: 1px solid black;
     }
 
     .presentDoubt {
         /* background-color: brown; */
         height: 100px;
-        width: 300px;
-        margin-top: 10px;
+        width: 320px;
+        margin-top: 6px;
         /* border-radius: 10px; */
         display: flex;
         flex-direction: column;

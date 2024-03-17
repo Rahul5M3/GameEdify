@@ -5,7 +5,6 @@ body {
     font-style: normal;    
     /* overflow: hidden;  */
     display: flex;
-    /* background-color: #E9EAEC; */
 }
 
 .big-container {
@@ -156,6 +155,8 @@ body {
 
 .inside-content3 p {
     padding: 0.5rem;
+    position: relative;
+    top: 10px;
     display: none;
 }
 

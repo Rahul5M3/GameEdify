@@ -111,7 +111,8 @@ router.post('/:chapterId/question/new', wrapAsync(async (req,res)=>{
     course.countQuestion=countQues;
     await course.save();
 
-    res.redirect(`/Gamedify/admin/${chapterId}/view/chapter`);
+    // res.redirect(`/Gamedify/admin/${chapterId}/view/chapter`);
+    res.redirect("/Gamedify/admin/view/chapter");
 }))
 
 router.get("/:id/view/question", wrapAsync(async(req,res)=>{

@@ -204,8 +204,8 @@ body {
 }
 
 .ansTick {
-    height: 60px;
-    width: 200px;
+    height: 40px;
+    width: 300px;
     background-color: white;
     color: black;
     border-radius: 40px;
@@ -213,8 +213,11 @@ body {
     margin-right: 1rem;
     padding: 1rem;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 
@@ -333,7 +336,7 @@ body {
         height: 490px;
         width: 60px;
         position: absolute;
-        right: -34px;
+        right: -60px;
         top: 124px;
         background-color: black;
         border-top-left-radius: 20px;
@@ -371,9 +374,9 @@ body {
     .inside1-content1 {
         /* background-color: aqua; */
         height: 60px;
-        width: 160px;
+        width: 200px;
         position: relative;
-        top: 50px;
+        top: 30px;
         left: 40px;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
@@ -385,7 +388,7 @@ body {
     .inside2-content1 {
         /* background-color: aquamarine; */
         height: 80px;
-        width: 260px;
+        width: 280px;
         position: relative;
         top: 80px;
         left: 40px;
@@ -522,7 +525,7 @@ body {
     #solveform {
         /* background-color: black; */
         background-color: #CCCDC6;
-        height: 599px;
+        height: 630px;
         width: 320px;
         position: relative;
         top: 64px;
@@ -533,7 +536,7 @@ body {
     .allOption {
         display: flex;
         flex-wrap: wrap;
-        width: 300px;
+        width: 400px;
         cursor: pointer;
     }
     
@@ -543,17 +546,21 @@ body {
     }
 
     .ansTick {
-        height: 40px;
-        width: 190px;
+        height: 60px;
+        width: 230px;
         background-color: white;
         color: black;
         border-radius: 40px;
         margin-bottom: 1rem;
         margin-right: 1rem;
-        padding: 1rem;
+        padding: 0.5rem;
         font-weight: bold;
         text-align: left;
         cursor: pointer;
+        /* text-align: left; */
+        display: flex;
+    justify-content: left;
+    align-items: center;
     }
     
     

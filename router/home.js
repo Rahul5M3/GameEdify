@@ -44,8 +44,9 @@ router.post('/doubtQues',isLoggedin,async (req,res)=>{
 })
 
 router.get('/doubtQues',isLoggedin,async(req,res)=>{
-    let Doubtq=await DoubtQ.find({});
-    res.render("home/doubt.ejs",{Doubtq});
+    let Doubtq=await DoubtQ.find({user:{$ne:req.user._id}});
+    let user=req.user._id;
+    res.render("home/doubt.ejs",{Doubtq,user});
 })
 
 router.get('/doubtQ/:id',isLoggedin,async(req,res)=>{

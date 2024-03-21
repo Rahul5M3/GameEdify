@@ -265,7 +265,7 @@
                         <div class="  p-2">
                             <div class="dsh_stats_w">
                             <div class="stats_head">
-                            <h2>Incorrect Question</h2>
+                            <h2>Doubt Question</h2>
                             
                             <div class="stat_sub_hed">
                             <span>Total Questions: <b><%=user.doubtQues.length%></b></span>
@@ -289,6 +289,13 @@
                             <td><%=dq.doubtQues%></td>
                             
                             </tr>
+                            <% if(dq.doubtans){ %>
+                            <tr>
+                               
+                                <td>Ans : <%=dq.doubtans%></td>
+                                
+                                </tr>
+                            <% } %>    
                             
                             </tbody>
                             </table>

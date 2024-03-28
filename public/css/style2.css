@@ -56,6 +56,7 @@ body {
     z-index: 1;
 }
 
+
 #sidebarpart-1 {
     /* background-color: white; */
     color: white;
@@ -961,7 +962,7 @@ body {
         display: flex;
         flex-direction: column;
         color: white;
-        margin-bottom: 1rem;
+        margin-bottom: 6rem;
     }
 
     .presentDoubt .dq {

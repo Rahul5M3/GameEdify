@@ -69,8 +69,9 @@ router.get('/explore',isLoggedin, wrapAsync(async (req,res)=>{
     let courses=await Course.find({}).populate('chapters').populate('questions');
     req.flash("success","Welcome");
     // res.send('hhfhf');
-    res.render('home/explore.ejs',{courses});
+    res.render('home/newExplore.ejs',{courses});
 }))
+
 
 router.post("/signup",async(req,res)=>{
     let {username,email,password}=req.body;

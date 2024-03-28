@@ -19,6 +19,19 @@
     <%- include('../includes/start-navbar.ejs') %>
 
     <div class="big-container">
+
+        <a href="#searchText" onClick="visiteThis('searchText')">
+            <div class="iconSearch">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </a>
+
+        <div class="searchoption">
+            <form action="/Gamedify/search" method="get">
+                <input type="text" name="s" id="search1" placeholder="search course ......" required>
+                <button class="searchbtn">Search</button>
+            </form>
+        </div>
         
         <div class="upbar">
             <div id="upbarpart-1"><a class="navbar-brand" href="/Gamedify/explore">Gamedify</a></div>
@@ -62,6 +75,13 @@
                     <input type="submit" class="writeBtn" >
                 </form>
             </div>
+        </div>
+
+        <div id="searchText">
+            <form action="/Gamedify/search" method="get">
+                <input type="text" name="s" id="search1" placeholder="search course ......" required>
+                <button class="searchbtn">Search</button>
+            </form>
         </div>
 
     </div>

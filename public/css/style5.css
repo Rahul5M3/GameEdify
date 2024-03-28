@@ -4,7 +4,7 @@ body {
     font-family: "Anta", sans-serif;
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 850px;
+    height: 900px;
 }
 
 .big-container {
@@ -261,6 +261,20 @@ body {
     display: none;
 }
 
+.searchoption {
+    position: absolute;
+    left: 800px;
+    top: 20px;
+}
+
+.iconSearch {
+    display: none;
+}
+
+#searchText {
+    display: none;
+}
+
 @media screen and (max-width:428px) {
     body {
         /* height: 634px; */
@@ -345,5 +359,25 @@ body {
         position: relative;
         top: 10px;
         left: 4px;
+    }
+
+    .searchoption {
+        display: none;
+    }
+
+    .iconSearch {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 350px;
+        font-size: x-large;
+    }
+
+    #searchText {
+        display: block;
+        position: relative;
+        width: 370px;
+        left: 50px;
+        top: 10px;
     }
 }

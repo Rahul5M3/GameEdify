@@ -92,6 +92,18 @@ function visiteThis(sectionId){
     }
 }
 
+const menuBar=document.querySelector('.menuBar-box');
+const menuBox=document.querySelector('.menuBox');
+menuBar.addEventListener('click',()=>{
+    if(menuBox.style.display==='none'){
+        menuBox.style.display='block';
+        menuBar.style.zIndex='10';      
+    }else {
+        menuBox.style.display='none';
+        menuBar.style.zIndex='2';
+    }
+});
+
 
 document.querySelector('.doubtbox').addEventListener('click',(event)=>{
     event.preventDefault();

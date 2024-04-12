@@ -1,19 +1,4 @@
 @media screen and (min-width: 427px) {
-    
-    .infoooo {
-        color: black;
-        font-weight: bolder;
-        font-size: 20px;
-        z-index: 10;
-        text-align: center;
-    }
-
-    .info-icons {
-        font-size: 60px;
-        position: absolute;
-        top: 300px;
-        right: 450px;
-    }
 
     .content {
         display: none;
@@ -21,13 +6,26 @@
     .content1 {
         display: none;
     }
-    .content2 {
+    .content2{
         display: none;
     }
     .menuBar-box {
         display: none;
     }
-}
+    .menuBox {
+        display: none;
+    }
+    .iiinfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+
+}    
 
 @media screen and (max-width: 426px) {
     body {
@@ -36,13 +34,10 @@
         height: 100vh;
     }
 
-    .infoooo {
+    .iiinfo {
         display: none;
     }
 
-    .info-icons {
-        display: none;
-    }
 
     .content {
         height: 100vh;

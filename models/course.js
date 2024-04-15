@@ -30,4 +30,6 @@ const courseSchema=new Schema({
     }
 });
 
+courseSchema.index({ fieldName: 'text' });
+
 module.exports=new mongoose.model('Course',courseSchema);

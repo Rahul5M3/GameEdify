@@ -23,7 +23,7 @@ router.get("/:id/question",isLoggedin,wrapAsync(async(req,res)=>{
     if(ques.length!=0){
         res.render('start/web-question.ejs',{ques,users});
     }else {
-        req.flash('error',"No Questions available");
+        req.flash('success',"No Questions available");
         res.redirect('/Gamedify/explore');
     }
 }))

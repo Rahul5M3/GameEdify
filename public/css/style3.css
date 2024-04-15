@@ -234,6 +234,7 @@ body {
 .flash2 {
     position: relative;
     top: 60px;
+    z-index: 20;
 }
 
 .flash-btn {

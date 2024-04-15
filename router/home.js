@@ -27,9 +27,15 @@ router.get('/user',isLoggedin,((req,res)=>{
 
 router.get('/search', async(req,res)=>{
     let {s}=req.query;
-    let courses=await Course.find({courseName:s});
+    let courses=await Course.find({ courseName: { $regex: s, $options: 'i' } });
     // res.send(courses);
-    res.render('home/explore.ejs',{courses});
+    if(courses.length>0){
+        req.flash('success','Result according to your search');
+        res.render('home/explore.ejs',{courses});
+    }
+    else {
+        res.redirect('/Gamedify/explore');
+    }
 })
 
 router.post('/doubtQues',isLoggedin,async (req,res)=>{

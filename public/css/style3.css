@@ -334,11 +334,11 @@ body {
     .stickyfooter{
         display: block;
         height: 490px;
-        width: 60px;
-        position: absolute;
-        right: -20px;
-        top: 124px;
-        background-color: black;
+        width: 50px;
+        position: fixed;
+        right: 10px;
+        top: 108px;
+        background-color: grey;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         border-bottom-left-radius: 20px;
@@ -445,12 +445,13 @@ body {
         /* background-color: brown; */
         height: 300px;
         position: relative;
-        top: 100px;
+        top: 80px;
         left: 10px;
         width: 80%;
         margin-bottom: 4rem;
         display: flex;
         flex-direction: column;
+        padding-bottom: 1rem;
     }
     
     .inside-content3 {
@@ -590,3 +591,24 @@ body {
     }
     
 }
+
+@media screen and (max-width:320px) {
+    .stickyfooter{
+        display: block;
+        height: 490px;
+        width: 50px;
+        position: fixed;
+        left: 0;
+        top: 108px;
+        background-color: grey;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        /* color: cadetblue; */
+    }
+}    

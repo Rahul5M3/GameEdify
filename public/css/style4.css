@@ -9,6 +9,9 @@
     .content2{
         display: none;
     }
+    .content3 {
+        display: none;
+    }
     .menuBar-box {
         display: none;
     }
@@ -152,7 +155,7 @@
     
     .menuBox {
         position: fixed;
-        height: 70vh;
+        height: 80vh;
         width: 100px;
         background-color: black;
         z-index: 4;
@@ -228,5 +231,13 @@
 
     .incorrectQ {
         overflow-y: scroll;
+    }
+
+    .content3 {
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+        top: 2000px;
+        padding: 1rem;
     }
 }

@@ -48,6 +48,7 @@
     <a href="#content"><div class="insideMenuBox-i" onclick="visiteThis('content')"><i class="fa-regular fa-user" style="color: #ffffff;"></i></div></a>
     <a href="#content1"><div class="insideMenuBox-i" onclick="visiteThis('content1')"><i class="fa-solid fa-check" style="color: #ffffff;"></i></div></a>
     <a href="#content2"><div class="insideMenuBox-i" onclick="visiteThis('content2')"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></div></a>
+    <a href="#content3"><div class="insideMenuBox-i" onclick="visiteThis('content3')"><i class="fa-solid fa-question" style="color: #ffffff;"></i></div></a>
     <a href="/Gamedify"><div class="insideMenuBox-i"><i class="fa-solid fa-d" style="color: #ffffff;"></i></div></a>
 </div>
 </div>
@@ -74,7 +75,7 @@
                             <div class="row">
                                 <div class="col-4">
                                     <div class="mt-3">
-                                        <h4><%=user.correctQues.length%> + <%=user.incorrectQues.length%></h4>
+                                        <h4><%=totalCorrect%></h4>
                                         <p class="mb-0 text-muted">Total Questions</p>
                                     </div>
                                 </div>
@@ -154,6 +155,33 @@
      </table>
      </div>   
 </div>
+
+
+<div id="content3" class="content3">
+    <h2 style="margin-bottom: 2rem; font-weight: bold; text-align: center;">Doubt Questions</h2>
+    <div class="incorrectQ">
+    <table class="table table-striped table-class" id= "table-id">
+  
+        <thead>
+        <tr>
+          <th>Question</th>
+          <th>Ans</th>
+        </tr>
+          
+        </thead>
+        
+        <tbody>
+            <% for(let cq of user.doubtQues){ %>
+        <tr>
+            <td style="color: black;"><%=cq.doubtQues%></td>
+            <td style="color: black;"><%=cq.doubtans%></td>
+        </tr>
+            <% } %>
+        </tbody>
+     </table>
+     </div>   
+</div>
+
 
 
 
